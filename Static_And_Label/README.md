@@ -8,7 +8,7 @@
 感情婚姻与人生走势，帮你看清自身优势，把握关键机遇，趋吉避凶，规划更顺的人生方向
 ```
 <p align="center">
-  <img src="../Fortune_telling.png" width="188">
+  <img src="../Fortune_telling.png" width="388">
 </p>
 
 `Static_And_Label` 是一个面向中文 Query 标注分析、静态规则挖掘、Embedding 相似召回和文本分类预测的工具目录。

@@ -219,9 +219,9 @@ if __name__ == "__main__":
         print("path:", path)
         for indx, row in dataframe.iterrows():
             query = row["Query"]
-            srcid = row["阿拉丁资源id"]
+            srcid = row["id"]
             try:
-                pv = int(row["展现量"] + row["跳转点击量"] + row["点击量"])
+                pv = int(row["show"] + row["judge"] + row["click"])
                 if pv < 2:
                     continue
             except:

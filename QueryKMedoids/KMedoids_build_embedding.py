@@ -141,8 +141,10 @@ class QueryWeightKmeans:
 
     def dumps_vector(self, path, srcid) -> None:
         out_path = path.replace(".txt", "_" + str(srcid) + ".json")
-        with open(out_path, "w") as w:
-            json.dump(self.view_embeddings, w, indent=2, ensure_ascii=False)
+        ## 这里注意，超大文件问题
+        with open(out_path, "w") as wf:
+            for q, w, emb in zip(self.view_embeddings["query"], self.view_embeddings["weight"], self.view_embeddings["embedding"]):
+                wf.write(json.dumps({"q":q, "w":w, "emb": emb}, ensure_ascii=False) + "\n")
 
 def list_file(folder_path):
     all_items = os.listdir(folder_path)
@@ -167,6 +169,28 @@ def split_list_evenly(lst, num_srcids, skipList = None):
         chunks[num_srcids[idx % len(num_srcids)]].append(item)
     return chunks
 
+# path = "data/19192816.txt"
+# MODEL = MODEL.half().to(f"cuda:1")
+# dataframe = pd.read_csv(path, sep="\t", quoting=3, on_bad_lines="skip")
+# query_items = []
+# srcid = -1
+# print("path:", path)
+# for indx, row in dataframe.iterrows():
+#     query = row["Query"]
+#     srcid = row["阿拉丁资源id"]
+#     try:
+#         pv = int(row["展现量"] + row["跳转点击量"] + row["点击量"])
+#         if pv < 2:
+#             continue
+#     except:
+#         continue
+#     query_items.append([query, pv])
+# wkmeas = QueryWeightKmeans(querys = query_items,
+#                             encode_fn = encode_fn,
+#                             batch_size = 8)
+# wkmeas.build_vector_index()
+# wkmeas.dumps_vector(path, srcid)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpus", type=str, required=True,
@@ -184,7 +208,7 @@ if __name__ == "__main__":
 
     num_srcids = gpu_ids
 
-    chunks = split_list_evenly(lst, num_srcids, ['./data/19170147.txt'])
+    chunks = split_list_evenly(lst, num_srcids)
     # print(chunks)
     print("执行文件", chunks[gpuid])
 
@@ -195,9 +219,9 @@ if __name__ == "__main__":
         print("path:", path)
         for indx, row in dataframe.iterrows():
             query = row["Query"]
-            srcid = row["id"]
+            srcid = row["阿拉丁资源id"]
             try:
-                pv = int(row["show"] + row["judge"] + row["click"])
+                pv = int(row["展现量"] + row["跳转点击量"] + row["点击量"])
                 if pv < 2:
                     continue
             except:

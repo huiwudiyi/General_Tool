@@ -10,11 +10,9 @@
 @Contact : zachary6chu@gmail.com
 """
 import os
+import sys
 import json
-import datetime
 import numpy as np
-import pandas as pd
-from json_repair import repair_json
 from sklearn.metrics.pairwise import pairwise_distances
 
 class WeightedKMedoids:
@@ -75,29 +73,42 @@ class WeightedKMedoids:
             raise ValueError("fit时需要传入参数 queries=原始query列表")
         return self.cluster_centers_query_
 
-
 def list_file(folder_path):
     all_items = os.listdir(folder_path)
     # 只列出文件（不包括文件夹）
     files_only = [os.path.join(folder_path, item) for item in all_items if os.path.isfile(os.path.join(folder_path, item)) and item.endswith("json")]
-    print("\n只列出文件:")
     return files_only
 
+def list_json_call_query(folder_path):
+    all_items = os.listdir(folder_path)
+    # 只列出文件（不包括文件夹）
+    files_only = [os.path.join(folder_path, item).replace("_call_query", ".json") for item in all_items if os.path.isfile(os.path.join(folder_path, item)) and item.endswith("_call_query")]
+    return files_only
 
 def main():
     """主函数"""
     paths = list_file("./data")
     print(paths)
-    for path in paths:
-        view_embeddings = {}
+    for path in list_file("./data"):
+        if path in list_json_call_query("./data"):
+            print("path", path, "skip")
+            continue
+        print("processing", path)
         with open(path) as f:
-            view_embeddings = json.load(f)
-            querys = view_embeddings["query"]
-            weight = np.asarray(view_embeddings["weight"], dtype=np.float32)
-            embeddings = np.asarray(view_embeddings["embedding"], dtype=np.float32)
+            querys = []
+            weights = []
+            embeddings = []
+            for line in f:
+                # {"q":q, "w":w, "emb": emb}
+                qwe = json.loads(line.strip())
+                querys.append(qwe["q"])
+                weights.append(qwe["w"])
+                embeddings.append(qwe["emb"])
+            weights = np.asarray(weights, dtype=np.float32)
+            embeddings = np.asarray(embeddings, dtype=np.float32)
 
             # ==========核心：权重log变换==========
-            w_log = np.log(weight)
+            w_log = np.log(weights)
             n_clusters = min(int(len(querys)/100), 100)
             # ========== 模型 fit ==================
             model = WeightedKMedoids(n_clusters=n_clusters)
@@ -112,7 +123,7 @@ def main():
                 mask = labels == c
                 center_q = center_queries[c]
                 w.write(center_q + "\n")
-                print(f"簇{c} | 中心query：{center_q} | item数量:{mask.sum()}, 总原始PV:{weight[mask].sum():.1f}")
+                print(f"簇{c} | 中心query：{center_q} | item数量:{mask.sum()}, 总原始PV:{weights[mask].sum():.1f}")
             w.flush()
             w.close()
 

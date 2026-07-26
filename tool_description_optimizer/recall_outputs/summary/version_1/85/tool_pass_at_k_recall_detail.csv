@@ -1,0 +1,799 @@
+﻿query,gold_ids,missing_gold_ids,view,k,pass_at_k,hit_ids,first_hit_rank,recall_ids,recall_scores,recall_views
+a steal中文翻译,['85'],[],description,1,1,['85'],1.0,['85'],[0.5105863809585571],['description']
+a steal中文翻译,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5105863809585571, 0.5078074336051941, 0.4795619249343872]","['description', 'description', 'description']"
+act out翻译成中文,['85'],[],description,1,1,['85'],1.0,['85'],[0.5606335401535034],['description']
+act out翻译成中文,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '23']","[0.5606335401535034, 0.550838828086853, 0.5142356157302856]","['description', 'description', 'description']"
+after all什么意思,['85'],[],description,1,1,['85'],1.0,['85'],[0.5377141237258911],['description']
+after all什么意思,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '62172']","[0.5377141237258911, 0.5233213901519775, 0.5150449275970459]","['description', 'description', 'description']"
+all good things come to an end,['85'],[],description,1,0,[],,['5601'],[0.4961869716644287],['description']
+all good things come to an end,['85'],[],description,3,0,[],,"['5601', '51323', '5671']","[0.4961869716644287, 0.494384229183197, 0.4772375822067261]","['description', 'description', 'description']"
+all in,['85'],[],description,1,0,[],,['51323'],[0.5574237108230591],['description']
+all in,['85'],[],description,3,1,['85'],3.0,"['51323', '5601', '85']","[0.5574237108230591, 0.5263363122940063, 0.5166264772415161]","['description', 'description', 'description']"
+all in的意思,['85'],[],description,1,0,[],,['51388'],[0.5728942155838013],['description']
+all in的意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5728942155838013, 0.5584492683410645, 0.5584129095077515]","['description', 'description', 'description']"
+as the saying goes,['85'],[],description,1,0,[],,['62172'],[0.5353753566741943],['description']
+as the saying goes,['85'],[],description,3,1,['85'],3.0,"['62172', '52336', '85']","[0.5353753566741943, 0.5058627128601074, 0.5056393146514893]","['description', 'description', 'description']"
+auld lang syne,['85'],[],description,1,0,[],,['51377'],[0.5322393774986267],['description']
+auld lang syne,['85'],[],description,3,0,[],,"['51377', '5601', '51323']","[0.5322393774986267, 0.5312464237213135, 0.5144897103309631]","['description', 'description', 'description']"
+ball buster,['85'],[],description,1,0,[],,['51388'],[0.508109986782074],['description']
+ball buster,['85'],[],description,3,0,[],,"['51388', '51377', '60977']","[0.508109986782074, 0.4945506453514099, 0.4828425943851471]","['description', 'description', 'description']"
+bbw的意思是什么意思,['85'],[],description,1,0,[],,['51388'],[0.537675678730011],['description']
+bbw的意思是什么意思,['85'],[],description,3,1,['85'],3.0,"['51388', '51386', '85']","[0.537675678730011, 0.492933064699173, 0.48146581649780273]","['description', 'description', 'description']"
+be flagged up,['85'],[],description,1,0,[],,['60977'],[0.500812292098999],['description']
+be flagged up,['85'],[],description,3,1,['85'],3.0,"['60977', '51388', '85']","[0.500812292098999, 0.4804225564002991, 0.4709087908267975]","['description', 'description', 'description']"
+beg off,['85'],[],description,1,0,[],,['51388'],[0.5211977958679199],['description']
+beg off,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '5601']","[0.5211977958679199, 0.5054692029953003, 0.4982697069644928]","['description', 'description', 'description']"
+big ass,['85'],[],description,1,0,[],,['51323'],[0.502192497253418],['description']
+big ass,['85'],[],description,3,0,[],,"['51323', '60977', '51388']","[0.502192497253418, 0.495463490486145, 0.4831759035587311]","['description', 'description', 'description']"
+blow out是什么意思,['85'],[],description,1,0,[],,['51388'],[0.5202297568321228],['description']
+blow out是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5202297568321228, 0.5167177319526672, 0.49968987703323364]","['description', 'description', 'description']"
+bread,['85'],[],description,1,0,[],,['60977'],[0.48580992221832275],['description']
+bread,['85'],[],description,3,1,['85'],3.0,"['60977', '51388', '85']","[0.48580992221832275, 0.47208723425865173, 0.4626227021217346]","['description', 'description', 'description']"
+bread 怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.5230110883712769],['description']
+bread 怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '51388']","[0.5230110883712769, 0.5107447504997253, 0.5070579051971436]","['description', 'description', 'description']"
+bridge the gap,['85'],[],description,1,0,[],,['60977'],[0.5483496189117432],['description']
+bridge the gap,['85'],[],description,3,1,['85'],2.0,"['60977', '85', '62172']","[0.5483496189117432, 0.5022863149642944, 0.4808334410190582]","['description', 'description', 'description']"
+buff是什么意思啊,['85'],[],description,1,0,[],,['51388'],[0.5456035137176514],['description']
+buff是什么意思啊,['85'],[],description,3,0,[],,"['51388', '5550', '51386']","[0.5456035137176514, 0.4717005789279938, 0.4677683115005493]","['description', 'description', 'description']"
+buzz,['85'],[],description,1,0,[],,['51388'],[0.5429005026817322],['description']
+buzz,['85'],[],description,3,0,[],,"['51388', '23', '51377']","[0.5429005026817322, 0.5426055788993835, 0.5319253206253052]","['description', 'description', 'description']"
+can't help but,['85'],[],description,1,1,['85'],1.0,['85'],[0.48518291115760803],['description']
+can't help but,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '51388']","[0.48518291115760803, 0.4827849268913269, 0.4662747383117676]","['description', 'description', 'description']"
+carry翻译成中文,['85'],[],description,1,1,['85'],1.0,['85'],[0.6492476463317871],['description']
+carry翻译成中文,['85'],[],description,3,1,['85'],1.0,"['85', '51388', '62172']","[0.6492476463317871, 0.6396757364273071, 0.6207730174064636]","['description', 'description', 'description']"
+chill的意思,['85'],[],description,1,0,[],,['51388'],[0.579270601272583],['description']
+chill的意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '52336']","[0.579270601272583, 0.5654549598693848, 0.5598277449607849]","['description', 'description', 'description']"
+chinglish 翻译,['85'],[],description,1,0,[],,['62172'],[0.6649590730667114],['description']
+chinglish 翻译,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '51388']","[0.6649590730667114, 0.6492799520492554, 0.5983384847640991]","['description', 'description', 'description']"
+clik clak,['85'],[],description,1,0,[],,['51388'],[0.5095373392105103],['description']
+clik clak,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '23']","[0.5095373392105103, 0.505833625793457, 0.5049939751625061]","['description', 'description', 'description']"
+come on,['85'],[],description,1,0,[],,['51377'],[0.5191697478294373],['description']
+come on,['85'],[],description,3,1,['85'],3.0,"['51377', '51388', '85']","[0.5191697478294373, 0.50356125831604, 0.48931658267974854]","['description', 'description', 'description']"
+come to life怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.4436397850513458],['description']
+come to life怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.4436397850513458, 0.4409802556037903, 0.4305359125137329]","['description', 'description', 'description']"
+come up的意思,['85'],[],description,1,1,['85'],1.0,['85'],[0.566474437713623],['description']
+come up的意思,['85'],[],description,3,1,['85'],1.0,"['85', '51388', '62172']","[0.566474437713623, 0.5522081851959229, 0.5519556999206543]","['description', 'description', 'description']"
+corpus delicti,['85'],[],description,1,0,[],,['51388'],[0.45724019408226013],['description']
+corpus delicti,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '267']","[0.45724019408226013, 0.44337737560272217, 0.4405258595943451]","['description', 'description', 'description']"
+crappy怎么读,['85'],[],description,1,0,[],,['62172'],[0.4749910831451416],['description']
+crappy怎么读,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '51388']","[0.4749910831451416, 0.4704684615135193, 0.4570246934890747]","['description', 'description', 'description']"
+crush是什么意思,['85'],[],description,1,0,[],,['51388'],[0.5133184790611267],['description']
+crush是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5133184790611267, 0.48514288663864136, 0.47587817907333374]","['description', 'description', 'description']"
+cuntboy是什么意思,['85'],[],description,1,0,[],,['51388'],[0.49616456031799316],['description']
+cuntboy是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '52336']","[0.49616456031799316, 0.4777667224407196, 0.46383804082870483]","['description', 'description', 'description']"
+cut about,['85'],[],description,1,0,[],,['51388'],[0.4989432394504547],['description']
+cut about,['85'],[],description,3,0,[],,"['51388', '60977', '51377']","[0.4989432394504547, 0.4983028769493103, 0.48886632919311523]","['description', 'description', 'description']"
+dab,['85'],[],description,1,0,[],,['51323'],[0.5258437395095825],['description']
+dab,['85'],[],description,3,0,[],,"['51323', '60977', '51388']","[0.5258437395095825, 0.5186483860015869, 0.508989155292511]","['description', 'description', 'description']"
+dearjohn怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.48507511615753174],['description']
+dearjohn怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '51388']","[0.48507511615753174, 0.47186708450317383, 0.4689851403236389]","['description', 'description', 'description']"
+desi怎么读,['85'],[],description,1,0,[],,['51388'],[0.5080648064613342],['description']
+desi怎么读,['85'],[],description,3,0,[],,"['51388', '52336', '51386']","[0.5080648064613342, 0.4916606843471527, 0.48240000009536743]","['description', 'description', 'description']"
+diamond cuts diamond翻译,['85'],[],description,1,1,['85'],1.0,['85'],[0.5076123476028442],['description']
+diamond cuts diamond翻译,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5076123476028442, 0.49840760231018066, 0.46896788477897644]","['description', 'description', 'description']"
+do justice to,['85'],[],description,1,0,[],,['51388'],[0.5089113712310791],['description']
+do justice to,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '50143']","[0.5089113712310791, 0.5064462423324585, 0.48929068446159363]","['description', 'description', 'description']"
+dogg,['85'],[],description,1,0,[],,['51388'],[0.5121451616287231],['description']
+dogg,['85'],[],description,3,1,['85'],3.0,"['51388', '51377', '85']","[0.5121451616287231, 0.5105539560317993, 0.5072757005691528]","['description', 'description', 'description']"
+down英语怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.5741827487945557],['description']
+down英语怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.5741827487945557, 0.5670543909072876, 0.5653983354568481]","['description', 'description', 'description']"
+drama怎么读,['85'],[],description,1,0,[],,['52523'],[0.47233128547668457],['description']
+drama怎么读,['85'],[],description,3,1,['85'],2.0,"['52523', '85', '52524']","[0.47233128547668457, 0.4680969715118408, 0.46123236417770386]","['description', 'description', 'description']"
+easter egg,['85'],[],description,1,0,[],,['5601'],[0.5487366914749146],['description']
+easter egg,['85'],[],description,3,0,[],,"['5601', '51388', '51323']","[0.5487366914749146, 0.5089197158813477, 0.5002016425132751]","['description', 'description', 'description']"
+easy going是什么意思,['85'],[],description,1,0,[],,['62172'],[0.5301292538642883],['description']
+easy going是什么意思,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '50143']","[0.5301292538642883, 0.5199464559555054, 0.498405396938324]","['description', 'description', 'description']"
+extreme ironing,['85'],[],description,1,0,[],,['60977'],[0.4935102164745331],['description']
+extreme ironing,['85'],[],description,3,1,['85'],2.0,"['60977', '85', '62172']","[0.4935102164745331, 0.4851830005645752, 0.4742942750453949]","['description', 'description', 'description']"
+eyeopening什么意思,['85'],[],description,1,1,['85'],1.0,['85'],[0.5418907403945923],['description']
+eyeopening什么意思,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5418907403945923, 0.5247365236282349, 0.5205308198928833]","['description', 'description', 'description']"
+fake是什么意思,['85'],[],description,1,0,[],,['51388'],[0.5280240774154663],['description']
+fake是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5280240774154663, 0.507639467716217, 0.4952131509780884]","['description', 'description', 'description']"
+fall in place,['85'],[],description,1,0,[],,['51323'],[0.4981728792190552],['description']
+fall in place,['85'],[],description,3,0,[],,"['51323', '51377', '51044']","[0.4981728792190552, 0.4873446226119995, 0.48611754179000854]","['description', 'description', 'description']"
+fashion 翻译,['85'],[],description,1,1,['85'],1.0,['85'],[0.5433399677276611],['description']
+fashion 翻译,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5433399677276611, 0.5265957117080688, 0.5160037875175476]","['description', 'description', 'description']"
+fire off,['85'],[],description,1,0,[],,['51044'],[0.48342111706733704],['description']
+fire off,['85'],[],description,3,1,['85'],3.0,"['51044', '51388', '85']","[0.48342111706733704, 0.4814872741699219, 0.4722778797149658]","['description', 'description', 'description']"
+first off,['85'],[],description,1,0,[],,['51388'],[0.526157021522522],['description']
+first off,['85'],[],description,3,1,['85'],3.0,"['51388', '60977', '85']","[0.526157021522522, 0.5117681622505188, 0.5114213228225708]","['description', 'description', 'description']"
+five up,['85'],[],description,1,0,[],,['51388'],[0.5343590974807739],['description']
+five up,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51323']","[0.5343590974807739, 0.5152583122253418, 0.5103600025177002]","['description', 'description', 'description']"
+flake是什么意思,['85'],[],description,1,0,[],,['51388'],[0.4959942102432251],['description']
+flake是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.4959942102432251, 0.4649089276790619, 0.44798731803894043]","['description', 'description', 'description']"
+fork发音,['85'],[],description,1,0,[],,['51388'],[0.6177195906639099],['description']
+fork发音,['85'],[],description,3,1,['85'],3.0,"['51388', '23', '85']","[0.6177195906639099, 0.5862412452697754, 0.5823050737380981]","['description', 'description', 'description']"
+frowned upon. 翻译,['85'],[],description,1,0,[],,['62172'],[0.48606449365615845],['description']
+frowned upon. 翻译,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '50143']","[0.48606449365615845, 0.47338587045669556, 0.44604364037513733]","['description', 'description', 'description']"
+fuck,['85'],[],description,1,0,[],,['51388'],[0.5084202289581299],['description']
+fuck,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '23']","[0.5084202289581299, 0.5068255662918091, 0.49916642904281616]","['description', 'description', 'description']"
+fuck you 啥意思,['85'],[],description,1,0,[],,['51388'],[0.5127001404762268],['description']
+fuck you 啥意思,['85'],[],description,3,1,['85'],3.0,"['51388', '62172', '85']","[0.5127001404762268, 0.5053616762161255, 0.4900010824203491]","['description', 'description', 'description']"
+funny mud pee翻译成中文,['85'],[],description,1,0,[],,['62172'],[0.45399847626686096],['description']
+funny mud pee翻译成中文,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '51388']","[0.45399847626686096, 0.43853744864463806, 0.4381260275840759]","['description', 'description', 'description']"
+gaybear,['85'],[],description,1,0,[],,['51388'],[0.4942837357521057],['description']
+gaybear,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '5601']","[0.4942837357521057, 0.48989033699035645, 0.48575013875961304]","['description', 'description', 'description']"
+get over什么,['85'],[],description,1,1,['85'],1.0,['85'],[0.5274808406829834],['description']
+get over什么,['85'],[],description,3,1,['85'],1.0,"['85', '51388', '62172']","[0.5274808406829834, 0.5209937691688538, 0.5126914978027344]","['description', 'description', 'description']"
+getout翻译成中文,['85'],[],description,1,1,['85'],1.0,['85'],[0.5571965575218201],['description']
+getout翻译成中文,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5571965575218201, 0.5560264587402344, 0.5179962515830994]","['description', 'description', 'description']"
+give me five的意思,['85'],[],description,1,0,[],,['51388'],[0.6342833638191223],['description']
+give me five的意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.6342833638191223, 0.5915588140487671, 0.5625505447387695]","['description', 'description', 'description']"
+goat怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.4658505320549011],['description']
+goat怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.4658505320549011, 0.44611287117004395, 0.44315457344055176]","['description', 'description', 'description']"
+golden goose,['85'],[],description,1,0,[],,['51323'],[0.5124850869178772],['description']
+golden goose,['85'],[],description,3,0,[],,"['51323', '51590', '60977']","[0.5124850869178772, 0.5121339559555054, 0.5118929147720337]","['description', 'description', 'description']"
+goona怎么读,['85'],[],description,1,0,[],,['51388'],[0.46780532598495483],['description']
+goona怎么读,['85'],[],description,3,0,[],,"['51388', '51381', '51377']","[0.46780532598495483, 0.4591192603111267, 0.45503950119018555]","['description', 'description', 'description']"
+goon是什么意思,['85'],[],description,1,0,[],,['51388'],[0.5037034153938293],['description']
+goon是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '52336']","[0.5037034153938293, 0.48658668994903564, 0.48553818464279175]","['description', 'description', 'description']"
+green hand是什么意思,['85'],[],description,1,0,[],,['51388'],[0.48521798849105835],['description']
+green hand是什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '52336']","[0.48521798849105835, 0.46419426798820496, 0.450434148311615]","['description', 'description', 'description']"
+halp怎么读,['85'],[],description,1,0,[],,['51388'],[0.49800926446914673],['description']
+halp怎么读,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.49800926446914673, 0.4953099489212036, 0.4775998592376709]","['description', 'description', 'description']"
+heya是什么意思,['85'],[],description,1,0,[],,['51388'],[0.5351271629333496],['description']
+heya是什么意思,['85'],[],description,3,0,[],,"['51388', '52336', '51386']","[0.5351271629333496, 0.5094929933547974, 0.484406054019928]","['description', 'description', 'description']"
+high的怎么读,['85'],[],description,1,0,[],,['51388'],[0.5174109935760498],['description']
+high的怎么读,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5174109935760498, 0.5071488618850708, 0.48912084102630615]","['description', 'description', 'description']"
+hisself,['85'],[],description,1,0,[],,['51388'],[0.49867337942123413],['description']
+hisself,['85'],[],description,3,1,['85'],3.0,"['51388', '51377', '85']","[0.49867337942123413, 0.49685385823249817, 0.47962456941604614]","['description', 'description', 'description']"
+hold fast to,['85'],[],description,1,0,[],,['51388'],[0.5015952587127686],['description']
+hold fast to,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51323']","[0.5015952587127686, 0.4936909079551697, 0.4886941909790039]","['description', 'description', 'description']"
+horny,['85'],[],description,1,0,[],,['51388'],[0.4473054111003876],['description']
+horny,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51377']","[0.4473054111003876, 0.4294459819793701, 0.42741385102272034]","['description', 'description', 'description']"
+humblebrag,['85'],[],description,1,0,[],,['60977'],[0.4727955460548401],['description']
+humblebrag,['85'],[],description,3,1,['85'],3.0,"['60977', '50143', '85']","[0.4727955460548401, 0.4368865489959717, 0.4326014518737793]","['description', 'description', 'description']"
+i'm cross什么意思,['85'],[],description,1,1,['85'],1.0,['85'],[0.4942918121814728],['description']
+i'm cross什么意思,['85'],[],description,3,1,['85'],1.0,"['85', '51388', '62172']","[0.4942918121814728, 0.4867933988571167, 0.483381450176239]","['description', 'description', 'description']"
+ily什么意思,['85'],[],description,1,0,[],,['51388'],[0.5951484441757202],['description']
+ily什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '52336']","[0.5951484441757202, 0.566238284111023, 0.5596098899841309]","['description', 'description', 'description']"
+in lieu,['85'],[],description,1,0,[],,['51388'],[0.5265054702758789],['description']
+in lieu,['85'],[],description,3,1,['85'],3.0,"['51388', '5601', '85']","[0.5265054702758789, 0.5214523673057556, 0.519805908203125]","['description', 'description', 'description']"
+just chill,['85'],[],description,1,0,[],,['5601'],[0.5492463111877441],['description']
+just chill,['85'],[],description,3,0,[],,"['5601', '51377', '5671']","[0.5492463111877441, 0.5038279294967651, 0.5028519630432129]","['description', 'description', 'description']"
+karen正确发音,['85'],[],description,1,0,[],,['50143'],[0.45666688680648804],['description']
+karen正确发音,['85'],[],description,3,1,['85'],2.0,"['50143', '85', '51388']","[0.45666688680648804, 0.4471166133880615, 0.43421000242233276]","['description', 'description', 'description']"
+ket什么意思,['85'],[],description,1,0,[],,['51388'],[0.5708435773849487],['description']
+ket什么意思,['85'],[],description,3,0,[],,"['51388', '52336', '51386']","[0.5708435773849487, 0.5337439775466919, 0.5243105888366699]","['description', 'description', 'description']"
+kill me softly,['85'],[],description,1,0,[],,['51377'],[0.48787614703178406],['description']
+kill me softly,['85'],[],description,3,0,[],,"['51377', '62206', '8470']","[0.48787614703178406, 0.4683274030685425, 0.4683274030685425]","['description', 'description', 'description']"
+leftie,['85'],[],description,1,0,[],,['51388'],[0.4933285713195801],['description']
+leftie,['85'],[],description,3,1,['85'],3.0,"['51388', '51377', '85']","[0.4933285713195801, 0.4844408333301544, 0.47449544072151184]","['description', 'description', 'description']"
+less is more,['85'],[],description,1,0,[],,['60977'],[0.5114206075668335],['description']
+less is more,['85'],[],description,3,0,[],,"['60977', '51388', '51377']","[0.5114206075668335, 0.48808959126472473, 0.4833798110485077]","['description', 'description', 'description']"
+life is a fucking movie翻译,['85'],[],description,1,1,['85'],1.0,['85'],[0.4455888569355011],['description']
+life is a fucking movie翻译,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '23']","[0.4455888569355011, 0.44443660974502563, 0.4077623784542084]","['description', 'description', 'description']"
+lil,['85'],[],description,1,0,[],,['51377'],[0.5374677181243896],['description']
+lil,['85'],[],description,3,0,[],,"['51377', '51388', '23']","[0.5374677181243896, 0.534762978553772, 0.5157370567321777]","['description', 'description', 'description']"
+lose yourself,['85'],[],description,1,0,[],,['51388'],[0.4757791757583618],['description']
+lose yourself,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51377']","[0.4757791757583618, 0.47275519371032715, 0.4687354862689972]","['description', 'description', 'description']"
+make it,['85'],[],description,1,0,[],,['60977'],[0.5275049209594727],['description']
+make it,['85'],[],description,3,0,[],,"['60977', '51044', '51388']","[0.5275049209594727, 0.49971383810043335, 0.4885442852973938]","['description', 'description', 'description']"
+make one's day什么意思,['85'],[],description,1,1,['85'],1.0,['85'],[0.4959351718425751],['description']
+make one's day什么意思,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '62172']","[0.4959351718425751, 0.4732252061367035, 0.4698968529701233]","['description', 'description', 'description']"
+milf,['85'],[],description,1,0,[],,['51388'],[0.4726759195327759],['description']
+milf,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51377']","[0.4726759195327759, 0.45059633255004883, 0.4400984048843384]","['description', 'description', 'description']"
+mosh pit,['85'],[],description,1,0,[],,['51388'],[0.4789542555809021],['description']
+mosh pit,['85'],[],description,3,0,[],,"['51388', '51377', '5671']","[0.4789542555809021, 0.4655414819717407, 0.4626917541027069]","['description', 'description', 'description']"
+mua翻译成中文,['85'],[],description,1,0,[],,['51388'],[0.5809686779975891],['description']
+mua翻译成中文,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51377']","[0.5809686779975891, 0.5505896806716919, 0.5454021096229553]","['description', 'description', 'description']"
+my mum has magic hands,['85'],[],description,1,0,[],,['51388'],[0.46116670966148376],['description']
+my mum has magic hands,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51377']","[0.46116670966148376, 0.44532638788223267, 0.44420087337493896]","['description', 'description', 'description']"
+nob,['85'],[],description,1,0,[],,['51388'],[0.5223767161369324],['description']
+nob,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '60977']","[0.5223767161369324, 0.5073888897895813, 0.502866268157959]","['description', 'description', 'description']"
+on the fly中文翻译,['85'],[],description,1,1,['85'],1.0,['85'],[0.5571287870407104],['description']
+on the fly中文翻译,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5571287870407104, 0.5518181324005127, 0.5271741151809692]","['description', 'description', 'description']"
+on the go,['85'],[],description,1,0,[],,['47190'],[0.5510382652282715],['description']
+on the go,['85'],[],description,3,0,[],,"['47190', '60977', '62106']","[0.5510382652282715, 0.5386641025543213, 0.5347158908843994]","['description', 'description', 'description']"
+ontherocks怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.4795125722885132],['description']
+ontherocks怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.4795125722885132, 0.4685250222682953, 0.4627702832221985]","['description', 'description', 'description']"
+onwards and upwards什么意思,['85'],[],description,1,1,['85'],1.0,['85'],[0.5198116302490234],['description']
+onwards and upwards什么意思,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.5198116302490234, 0.5176006555557251, 0.5001442432403564]","['description', 'description', 'description']"
+oops怎么读英语,['85'],[],description,1,0,[],,['62172'],[0.47663411498069763],['description']
+oops怎么读英语,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '50143']","[0.47663411498069763, 0.4693267345428467, 0.46907514333724976]","['description', 'description', 'description']"
+out什么意思,['85'],[],description,1,0,[],,['51388'],[0.6104539036750793],['description']
+out什么意思,['85'],[],description,3,1,['85'],3.0,"['51388', '52336', '85']","[0.6104539036750793, 0.5652730464935303, 0.5600699186325073]","['description', 'description', 'description']"
+paper tiger怎么读,['85'],[],description,1,0,[],,['51388'],[0.5213103294372559],['description']
+paper tiger怎么读,['85'],[],description,3,0,[],,"['51388', '51323', '52524']","[0.5213103294372559, 0.48810216784477234, 0.47714874148368835]","['description', 'description', 'description']"
+pay off什么意思,['85'],[],description,1,0,[],,['51388'],[0.5459499955177307],['description']
+pay off什么意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5459499955177307, 0.5247859954833984, 0.49746352434158325]","['description', 'description', 'description']"
+pikoo怎么读,['85'],[],description,1,0,[],,['51388'],[0.4858067035675049],['description']
+pikoo怎么读,['85'],[],description,3,0,[],,"['51388', '51377', '51381']","[0.4858067035675049, 0.4666261076927185, 0.4593707323074341]","['description', 'description', 'description']"
+quid,['85'],[],description,1,0,[],,['51388'],[0.5408076047897339],['description']
+quid,['85'],[],description,3,1,['85'],3.0,"['51388', '51323', '85']","[0.5408076047897339, 0.5252307653427124, 0.515479326248169]","['description', 'description', 'description']"
+rome wasn't built in a day,['85'],[],description,1,0,[],,['51323'],[0.5048614144325256],['description']
+rome wasn't built in a day,['85'],[],description,3,0,[],,"['51323', '5601', '51044']","[0.5048614144325256, 0.49305036664009094, 0.4645322859287262]","['description', 'description', 'description']"
+rooted to the spot,['85'],[],description,1,0,[],,['51388'],[0.45704495906829834],['description']
+rooted to the spot,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51044']","[0.45704495906829834, 0.4493647515773773, 0.4465155303478241]","['description', 'description', 'description']"
+sell out,['85'],[],description,1,0,[],,['60977'],[0.5278668403625488],['description']
+sell out,['85'],[],description,3,0,[],,"['60977', '5671', '5271']","[0.5278668403625488, 0.4856283664703369, 0.48312729597091675]","['description', 'description', 'description']"
+set eyes on,['85'],[],description,1,0,[],,['51388'],[0.5311608910560608],['description']
+set eyes on,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '60977']","[0.5311608910560608, 0.5245616436004639, 0.5167938470840454]","['description', 'description', 'description']"
+shed a tear,['85'],[],description,1,0,[],,['51377'],[0.48956096172332764],['description']
+shed a tear,['85'],[],description,3,1,['85'],3.0,"['51377', '23', '85']","[0.48956096172332764, 0.481945276260376, 0.47890421748161316]","['description', 'description', 'description']"
+ship的音标,['85'],[],description,1,0,[],,['51388'],[0.5132783055305481],['description']
+ship的音标,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5132783055305481, 0.5131411552429199, 0.4993920624256134]","['description', 'description', 'description']"
+smack怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.43560245633125305],['description']
+smack怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '52523', '62172']","[0.43560245633125305, 0.4343525171279907, 0.428249716758728]","['description', 'description', 'description']"
+small world,['85'],[],description,1,0,[],,['62106'],[0.5129059553146362],['description']
+small world,['85'],[],description,3,0,[],,"['62106', '62306', '51388']","[0.5129059553146362, 0.5123564004898071, 0.5108204483985901]","['description', 'description', 'description']"
+so what翻译中文,['85'],[],description,1,0,[],,['62172'],[0.5538091659545898],['description']
+so what翻译中文,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '51388']","[0.5538091659545898, 0.5530920028686523, 0.5182581543922424]","['description', 'description', 'description']"
+softy,['85'],[],description,1,0,[],,['60977'],[0.4965871572494507],['description']
+softy,['85'],[],description,3,0,[],,"['60977', '51388', '51377']","[0.4965871572494507, 0.49426668882369995, 0.4854980707168579]","['description', 'description', 'description']"
+sooo,['85'],[],description,1,0,[],,['51377'],[0.5175329446792603],['description']
+sooo,['85'],[],description,3,0,[],,"['51377', '23', '51388']","[0.5175329446792603, 0.5059393644332886, 0.5026999115943909]","['description', 'description', 'description']"
+speaking of which,['85'],[],description,1,1,['85'],1.0,['85'],[0.5279006958007812],['description']
+speaking of which,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '62172']","[0.5279006958007812, 0.5158555507659912, 0.5114908218383789]","['description', 'description', 'description']"
+squad,['85'],[],description,1,0,[],,['23'],[0.5006296634674072],['description']
+squad,['85'],[],description,3,1,['85'],2.0,"['23', '85', '51377']","[0.5006296634674072, 0.4856722950935364, 0.4781651198863983]","['description', 'description', 'description']"
+stand up翻译成中文,['85'],[],description,1,0,[],,['62172'],[0.5667258501052856],['description']
+stand up翻译成中文,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '51388']","[0.5667258501052856, 0.5655336380004883, 0.5449482798576355]","['description', 'description', 'description']"
+strapped翻译,['85'],[],description,1,0,[],,['62172'],[0.5226778984069824],['description']
+strapped翻译,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '50143']","[0.5226778984069824, 0.5180463790893555, 0.4767136573791504]","['description', 'description', 'description']"
+stumble upon怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.5100722312927246],['description']
+stumble upon怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.5100722312927246, 0.503436267375946, 0.4915071129798889]","['description', 'description', 'description']"
+suckers,['85'],[],description,1,0,[],,['62206'],[0.4768936336040497],['description']
+suckers,['85'],[],description,3,0,[],,"['62206', '8470', '60977']","[0.4768936336040497, 0.4768936336040497, 0.46744295954704285]","['description', 'description', 'description']"
+suck的意思,['85'],[],description,1,0,[],,['51388'],[0.5743585824966431],['description']
+suck的意思,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5743585824966431, 0.5574095845222473, 0.5444541573524475]","['description', 'description', 'description']"
+summon up the courage,['85'],[],description,1,1,['85'],1.0,['85'],[0.4940001368522644],['description']
+summon up the courage,['85'],[],description,3,1,['85'],1.0,"['85', '50143', '62172']","[0.4940001368522644, 0.4689258933067322, 0.46801382303237915]","['description', 'description', 'description']"
+sup,['85'],[],description,1,0,[],,['51044'],[0.5464613437652588],['description']
+sup,['85'],[],description,3,0,[],,"['51044', '60977', '51323']","[0.5464613437652588, 0.5297670960426331, 0.5191655158996582]","['description', 'description', 'description']"
+take breath away翻译,['85'],[],description,1,1,['85'],1.0,['85'],[0.4629337787628174],['description']
+take breath away翻译,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '23']","[0.4629337787628174, 0.4618360996246338, 0.4257693290710449]","['description', 'description', 'description']"
+the siver screen,['85'],[],description,1,0,[],,['51275'],[0.505285382270813],['description']
+the siver screen,['85'],[],description,3,0,[],,"['51275', '51377', '51323']","[0.505285382270813, 0.4819050431251526, 0.4780091643333435]","['description', 'description', 'description']"
+three some,['85'],[],description,1,0,[],,['60977'],[0.5630784630775452],['description']
+three some,['85'],[],description,3,0,[],,"['60977', '51377', '62206']","[0.5630784630775452, 0.5506808757781982, 0.550380289554596]","['description', 'description', 'description']"
+to make matters worse,['85'],[],description,1,0,[],,['60977'],[0.42388591170310974],['description']
+to make matters worse,['85'],[],description,3,1,['85'],3.0,"['60977', '50143', '85']","[0.42388591170310974, 0.4236562252044678, 0.41592836380004883]","['description', 'description', 'description']"
+troll,['85'],[],description,1,0,[],,['23'],[0.49631184339523315],['description']
+troll,['85'],[],description,3,1,['85'],2.0,"['23', '85', '51388']","[0.49631184339523315, 0.4725603461265564, 0.45557451248168945]","['description', 'description', 'description']"
+wanna怎么读,['85'],[],description,1,0,[],,['51388'],[0.5000451803207397],['description']
+wanna怎么读,['85'],[],description,3,1,['85'],2.0,"['51388', '85', '23']","[0.5000451803207397, 0.4688754677772522, 0.4645238518714905]","['description', 'description', 'description']"
+wifu,['85'],[],description,1,0,[],,['51388'],[0.5175629258155823],['description']
+wifu,['85'],[],description,3,1,['85'],3.0,"['51388', '51377', '85']","[0.5175629258155823, 0.5000059604644775, 0.49666932225227356]","['description', 'description', 'description']"
+woof怎么读的,['85'],[],description,1,1,['85'],1.0,['85'],[0.4841407537460327],['description']
+woof怎么读的,['85'],[],description,3,1,['85'],1.0,"['85', '51388', '23']","[0.4841407537460327, 0.4789026379585266, 0.46516871452331543]","['description', 'description', 'description']"
+workaholic怎么读,['85'],[],description,1,1,['85'],1.0,['85'],[0.4900205135345459],['description']
+workaholic怎么读,['85'],[],description,3,1,['85'],1.0,"['85', '62172', '50143']","[0.4900205135345459, 0.48067206144332886, 0.47943753004074097]","['description', 'description', 'description']"
+yep,['85'],[],description,1,0,[],,['51388'],[0.5386990308761597],['description']
+yep,['85'],[],description,3,0,[],,"['51388', '5601', '23']","[0.5386990308761597, 0.5199967622756958, 0.5150102376937866]","['description', 'description', 'description']"
+yyds是啥意思,['85'],[],description,1,0,[],,['51388'],[0.5461484789848328],['description']
+yyds是啥意思,['85'],[],description,3,0,[],,"['51388', '52336', '51386']","[0.5461484789848328, 0.5189366340637207, 0.5081335306167603]","['description', 'description', 'description']"
+时尚用英语怎么说fashion,['85'],[],description,1,0,[],,['62172'],[0.5024755597114563],['description']
+时尚用英语怎么说fashion,['85'],[],description,3,1,['85'],2.0,"['62172', '85', '50143']","[0.5024755597114563, 0.4941733181476593, 0.49374863505363464]","['description', 'description', 'description']"
+a steal中文翻译,['85'],[],merged,1,0,[],,['23'],[0.5292724967002869],['title_description']
+a steal中文翻译,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '62172']","[0.5292724967002869, 0.5205493569374084, 0.5078074336051941]","['title_description', 'title_description', 'description']"
+act out翻译成中文,['85'],[],merged,1,0,[],,['23'],[0.5724688768386841],['title_description']
+act out翻译成中文,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '62172']","[0.5724688768386841, 0.5606335401535034, 0.550838828086853]","['title_description', 'description', 'description']"
+after all什么意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5377141237258911],['description']
+after all什么意思,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '62172']","[0.5377141237258911, 0.5233213901519775, 0.5150449275970459]","['description', 'description', 'description']"
+all good things come to an end,['85'],[],merged,1,0,[],,['5601'],[0.4961869716644287],['description']
+all good things come to an end,['85'],[],merged,3,0,[],,"['5601', '51323', '23']","[0.4961869716644287, 0.494384229183197, 0.4911400079727173]","['description', 'description', 'title_description']"
+all in,['85'],[],merged,1,0,[],,['23'],[0.5625321269035339],['title_description']
+all in,['85'],[],merged,3,1,['85'],3.0,"['23', '51323', '85']","[0.5625321269035339, 0.5574237108230591, 0.553045392036438]","['title_description', 'description', 'title_description']"
+all in的意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5875849723815918],['title_description']
+all in的意思,['85'],[],merged,3,1,['85'],1.0,"['85', '51388', '51386']","[0.5875849723815918, 0.5728942155838013, 0.5584129095077515]","['title_description', 'description', 'description']"
+as the saying goes,['85'],[],merged,1,0,[],,['62172'],[0.5353753566741943],['description']
+as the saying goes,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '52336']","[0.5353753566741943, 0.5067539811134338, 0.5058627128601074]","['description', 'title_description', 'description']"
+auld lang syne,['85'],[],merged,1,0,[],,['23'],[0.5435032248497009],['title_description']
+auld lang syne,['85'],[],merged,3,0,[],,"['23', '51377', '5601']","[0.5435032248497009, 0.5322393774986267, 0.5312464237213135]","['title_description', 'description', 'description']"
+ball buster,['85'],[],merged,1,0,[],,['51388'],[0.508109986782074],['description']
+ball buster,['85'],[],merged,3,0,[],,"['51388', '23', '51377']","[0.508109986782074, 0.5006142854690552, 0.4945506453514099]","['description', 'title_description', 'description']"
+bbw的意思是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.537675678730011],['description']
+bbw的意思是什么意思,['85'],[],merged,3,1,['85'],3.0,"['51388', '51386', '85']","[0.537675678730011, 0.49992835521698, 0.48146581649780273]","['description', 'title_description', 'description']"
+be flagged up,['85'],[],merged,1,0,[],,['60977'],[0.5096196532249451],['title_description']
+be flagged up,['85'],[],merged,3,1,['85'],3.0,"['60977', '51388', '85']","[0.5096196532249451, 0.4804225564002991, 0.4709087908267975]","['title_description', 'description', 'description']"
+beg off,['85'],[],merged,1,0,[],,['51388'],[0.5211977958679199],['description']
+beg off,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '5601']","[0.5211977958679199, 0.5054692029953003, 0.4982697069644928]","['description', 'description', 'description']"
+big ass,['85'],[],merged,1,0,[],,['51323'],[0.502192497253418],['description']
+big ass,['85'],[],merged,3,0,[],,"['51323', '60977', '51388']","[0.502192497253418, 0.5000223517417908, 0.4831759035587311]","['description', 'title_description', 'description']"
+blow out是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5202297568321228],['description']
+blow out是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5202297568321228, 0.5167177319526672, 0.49968987703323364]","['description', 'description', 'description']"
+bread,['85'],[],merged,1,0,[],,['60977'],[0.497900128364563],['title_description']
+bread,['85'],[],merged,3,1,['85'],3.0,"['60977', '51388', '85']","[0.497900128364563, 0.47208723425865173, 0.4626227021217346]","['title_description', 'description', 'description']"
+bread 怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5230110883712769],['description']
+bread 怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '51388']","[0.5230110883712769, 0.5107447504997253, 0.5070579051971436]","['description', 'description', 'description']"
+bridge the gap,['85'],[],merged,1,0,[],,['60977'],[0.5536510944366455],['title_description']
+bridge the gap,['85'],[],merged,3,1,['85'],2.0,"['60977', '85', '23']","[0.5536510944366455, 0.5022863149642944, 0.48992887139320374]","['title_description', 'description', 'title_description']"
+buff是什么意思啊,['85'],[],merged,1,0,[],,['51388'],[0.5456035137176514],['description']
+buff是什么意思啊,['85'],[],merged,3,0,[],,"['51388', '51386', '51381']","[0.5456035137176514, 0.4867168962955475, 0.48594266176223755]","['description', 'title_description', 'title_description']"
+buzz,['85'],[],merged,1,0,[],,['51388'],[0.5429005026817322],['description']
+buzz,['85'],[],merged,3,0,[],,"['51388', '23', '51377']","[0.5429005026817322, 0.5426055788993835, 0.5319253206253052]","['description', 'description', 'description']"
+can't help but,['85'],[],merged,1,1,['85'],1.0,['85'],[0.48518291115760803],['description']
+can't help but,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '23']","[0.48518291115760803, 0.4827849268913269, 0.47145530581474304]","['description', 'description', 'title_description']"
+carry翻译成中文,['85'],[],merged,1,1,['85'],1.0,['85'],[0.6492476463317871],['description']
+carry翻译成中文,['85'],[],merged,3,1,['85'],1.0,"['85', '51388', '62172']","[0.6492476463317871, 0.6396757364273071, 0.6207730174064636]","['description', 'description', 'description']"
+chill的意思,['85'],[],merged,1,0,[],,['51388'],[0.579270601272583],['description']
+chill的意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '52336']","[0.579270601272583, 0.5654549598693848, 0.5598277449607849]","['description', 'description', 'description']"
+chinglish 翻译,['85'],[],merged,1,0,[],,['62172'],[0.6649590730667114],['description']
+chinglish 翻译,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '51388']","[0.6649590730667114, 0.6492799520492554, 0.5983384847640991]","['description', 'description', 'description']"
+clik clak,['85'],[],merged,1,0,[],,['23'],[0.5563355088233948],['title_description']
+clik clak,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.5563355088233948, 0.5232130289077759, 0.5095373392105103]","['title_description', 'title_description', 'description']"
+come on,['85'],[],merged,1,0,[],,['51377'],[0.5191697478294373],['description']
+come on,['85'],[],merged,3,0,[],,"['51377', '23', '51388']","[0.5191697478294373, 0.5050008296966553, 0.50356125831604]","['description', 'title_description', 'description']"
+come to life怎么读,['85'],[],merged,1,0,[],,['23'],[0.44955259561538696],['title_description']
+come to life怎么读,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '62172']","[0.44955259561538696, 0.4436397850513458, 0.4409802556037903]","['title_description', 'description', 'description']"
+come up的意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.566474437713623],['description']
+come up的意思,['85'],[],merged,3,1,['85'],1.0,"['85', '51388', '62172']","[0.566474437713623, 0.5522081851959229, 0.5519556999206543]","['description', 'description', 'description']"
+corpus delicti,['85'],[],merged,1,0,[],,['267'],[0.46898216009140015],['title_description']
+corpus delicti,['85'],[],merged,3,1,['85'],3.0,"['267', '51388', '85']","[0.46898216009140015, 0.45724019408226013, 0.44337737560272217]","['title_description', 'description', 'description']"
+crappy怎么读,['85'],[],merged,1,0,[],,['62172'],[0.4749910831451416],['description']
+crappy怎么读,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '51388']","[0.4749910831451416, 0.4704684615135193, 0.4570246934890747]","['description', 'description', 'description']"
+crush是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5133184790611267],['description']
+crush是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5133184790611267, 0.48514288663864136, 0.48253318667411804]","['description', 'description', 'title_description']"
+cuntboy是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.49616456031799316],['description']
+cuntboy是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '52336']","[0.49616456031799316, 0.4777667224407196, 0.46383804082870483]","['description', 'description', 'description']"
+cut about,['85'],[],merged,1,0,[],,['60977'],[0.5068114399909973],['title_description']
+cut about,['85'],[],merged,3,0,[],,"['60977', '51388', '51044']","[0.5068114399909973, 0.4989432394504547, 0.4941083788871765]","['title_description', 'description', 'title_description']"
+dab,['85'],[],merged,1,0,[],,['60977'],[0.5327098965644836],['title_description']
+dab,['85'],[],merged,3,0,[],,"['60977', '51323', '51044']","[0.5327098965644836, 0.5258437395095825, 0.5222803354263306]","['title_description', 'description', 'title_description']"
+dearjohn怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.48507511615753174],['description']
+dearjohn怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '51388']","[0.48507511615753174, 0.47186708450317383, 0.4689851403236389]","['description', 'description', 'description']"
+desi怎么读,['85'],[],merged,1,0,[],,['23'],[0.5171970129013062],['title_description']
+desi怎么读,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.5171970129013062, 0.5116907954216003, 0.5080648064613342]","['title_description', 'title_description', 'description']"
+diamond cuts diamond翻译,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5219215154647827],['title_description']
+diamond cuts diamond翻译,['85'],[],merged,3,1,['85'],1.0,"['85', '23', '62172']","[0.5219215154647827, 0.5135314464569092, 0.49840760231018066]","['title_description', 'title_description', 'description']"
+do justice to,['85'],[],merged,1,0,[],,['51388'],[0.5089113712310791],['description']
+do justice to,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '23']","[0.5089113712310791, 0.5064462423324585, 0.4954523742198944]","['description', 'description', 'title_description']"
+dogg,['85'],[],merged,1,0,[],,['23'],[0.518578052520752],['title_description']
+dogg,['85'],[],merged,3,1,['85'],3.0,"['23', '60977', '85']","[0.518578052520752, 0.5129971504211426, 0.5129801630973816]","['title_description', 'title_description', 'title_description']"
+down英语怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5741827487945557],['description']
+down英语怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '62172', '50143']","[0.5741827487945557, 0.5670543909072876, 0.5653983354568481]","['description', 'description', 'description']"
+drama怎么读,['85'],[],merged,1,0,[],,['51275'],[0.4881373643875122],['title_description']
+drama怎么读,['85'],[],merged,3,1,['85'],3.0,"['51275', '52523', '85']","[0.4881373643875122, 0.47233128547668457, 0.4680969715118408]","['title_description', 'description', 'description']"
+easter egg,['85'],[],merged,1,0,[],,['5601'],[0.5487366914749146],['description']
+easter egg,['85'],[],merged,3,0,[],,"['5601', '23', '51388']","[0.5487366914749146, 0.514972448348999, 0.5089197158813477]","['description', 'title_description', 'description']"
+easy going是什么意思,['85'],[],merged,1,0,[],,['62172'],[0.5301292538642883],['description']
+easy going是什么意思,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '50143']","[0.5301292538642883, 0.5199464559555054, 0.498405396938324]","['description', 'description', 'description']"
+extreme ironing,['85'],[],merged,1,0,[],,['23'],[0.4936712682247162],['title_description']
+extreme ironing,['85'],[],merged,3,1,['85'],3.0,"['23', '60977', '85']","[0.4936712682247162, 0.4935102164745331, 0.4851830005645752]","['title_description', 'description', 'description']"
+eyeopening什么意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5418907403945923],['description']
+eyeopening什么意思,['85'],[],merged,3,1,['85'],1.0,"['85', '62172', '51388']","[0.5418907403945923, 0.5247365236282349, 0.5205308198928833]","['description', 'description', 'description']"
+fake是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5280240774154663],['description']
+fake是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5280240774154663, 0.507639467716217, 0.4952131509780884]","['description', 'description', 'description']"
+fall in place,['85'],[],merged,1,0,[],,['23'],[0.4984162449836731],['title_description']
+fall in place,['85'],[],merged,3,0,[],,"['23', '51323', '51275']","[0.4984162449836731, 0.4981728792190552, 0.49442148208618164]","['title_description', 'description', 'title_description']"
+fashion 翻译,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5433399677276611],['description']
+fashion 翻译,['85'],[],merged,3,1,['85'],1.0,"['85', '23', '62172']","[0.5433399677276611, 0.5346715450286865, 0.5265957117080688]","['description', 'title_description', 'description']"
+fire off,['85'],[],merged,1,0,[],,['23'],[0.48674410581588745],['title_description']
+fire off,['85'],[],merged,3,0,[],,"['23', '51044', '51388']","[0.48674410581588745, 0.48342111706733704, 0.4814872741699219]","['title_description', 'description', 'description']"
+first off,['85'],[],merged,1,0,[],,['51388'],[0.526157021522522],['description']
+first off,['85'],[],merged,3,1,['85'],3.0,"['51388', '60977', '85']","[0.526157021522522, 0.5193230509757996, 0.5114213228225708]","['description', 'title_description', 'description']"
+five up,['85'],[],merged,1,0,[],,['51388'],[0.5343590974807739],['description']
+five up,['85'],[],merged,3,1,['85'],3.0,"['51388', '51275', '85']","[0.5343590974807739, 0.5191541910171509, 0.5152583122253418]","['description', 'title_description', 'description']"
+flake是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.4959942102432251],['description']
+flake是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '23']","[0.4959942102432251, 0.46801838278770447, 0.45736178755760193]","['description', 'title_description', 'title_description']"
+fork发音,['85'],[],merged,1,0,[],,['51388'],[0.6177195906639099],['description']
+fork发音,['85'],[],merged,3,1,['85'],3.0,"['51388', '23', '85']","[0.6177195906639099, 0.5862412452697754, 0.5823050737380981]","['description', 'description', 'description']"
+frowned upon. 翻译,['85'],[],merged,1,0,[],,['62172'],[0.48606449365615845],['description']
+frowned upon. 翻译,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '50143']","[0.48606449365615845, 0.47338587045669556, 0.44604364037513733]","['description', 'description', 'description']"
+fuck,['85'],[],merged,1,0,[],,['51388'],[0.5084202289581299],['description']
+fuck,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '23']","[0.5084202289581299, 0.5068255662918091, 0.5047383904457092]","['description', 'description', 'title_description']"
+fuck you 啥意思,['85'],[],merged,1,0,[],,['51388'],[0.5127001404762268],['description']
+fuck you 啥意思,['85'],[],merged,3,1,['85'],3.0,"['51388', '62172', '85']","[0.5127001404762268, 0.5053616762161255, 0.4900010824203491]","['description', 'description', 'description']"
+funny mud pee翻译成中文,['85'],[],merged,1,0,[],,['23'],[0.4917633533477783],['title_description']
+funny mud pee翻译成中文,['85'],[],merged,3,1,['85'],3.0,"['23', '62172', '85']","[0.4917633533477783, 0.45399847626686096, 0.45345407724380493]","['title_description', 'description', 'title_description']"
+gaybear,['85'],[],merged,1,0,[],,['23'],[0.5029885768890381],['title_description']
+gaybear,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.5029885768890381, 0.49570196866989136, 0.4942837357521057]","['title_description', 'title_description', 'description']"
+get over什么,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5274808406829834],['description']
+get over什么,['85'],[],merged,3,1,['85'],1.0,"['85', '51388', '62172']","[0.5274808406829834, 0.5209937691688538, 0.5126914978027344]","['description', 'description', 'description']"
+getout翻译成中文,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5571965575218201],['description']
+getout翻译成中文,['85'],[],merged,3,1,['85'],1.0,"['85', '62172', '23']","[0.5571965575218201, 0.5560264587402344, 0.5547713041305542]","['description', 'description', 'title_description']"
+give me five的意思,['85'],[],merged,1,0,[],,['51388'],[0.6342833638191223],['description']
+give me five的意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '51386']","[0.6342833638191223, 0.5915588140487671, 0.5682519674301147]","['description', 'description', 'title_description']"
+goat怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.4658505320549011],['description']
+goat怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '23', '62172']","[0.4658505320549011, 0.46275460720062256, 0.44611287117004395]","['description', 'title_description', 'description']"
+golden goose,['85'],[],merged,1,0,[],,['60977'],[0.5213733911514282],['title_description']
+golden goose,['85'],[],merged,3,0,[],,"['60977', '23', '51323']","[0.5213733911514282, 0.5189954042434692, 0.5124850869178772]","['title_description', 'title_description', 'description']"
+goona怎么读,['85'],[],merged,1,0,[],,['51388'],[0.46780532598495483],['description']
+goona怎么读,['85'],[],merged,3,0,[],,"['51388', '23', '51381']","[0.46780532598495483, 0.4658287763595581, 0.4591192603111267]","['description', 'title_description', 'description']"
+goon是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5037034153938293],['description']
+goon是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '52336']","[0.5037034153938293, 0.48658668994903564, 0.48553818464279175]","['description', 'description', 'description']"
+green hand是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.48573943972587585],['title_description']
+green hand是什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '52336']","[0.48573943972587585, 0.46419426798820496, 0.45651042461395264]","['title_description', 'description', 'title_description']"
+halp怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5219640731811523],['title_description']
+halp怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '23', '51388']","[0.5219640731811523, 0.5079904198646545, 0.49800926446914673]","['title_description', 'title_description', 'description']"
+heya是什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5351271629333496],['description']
+heya是什么意思,['85'],[],merged,3,0,[],,"['51388', '52336', '51381']","[0.5351271629333496, 0.5094929933547974, 0.4916020631790161]","['description', 'description', 'title_description']"
+high的怎么读,['85'],[],merged,1,0,[],,['51388'],[0.5174109935760498],['description']
+high的怎么读,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '62172']","[0.5174109935760498, 0.5071488618850708, 0.48912084102630615]","['description', 'description', 'description']"
+hisself,['85'],[],merged,1,0,[],,['23'],[0.5126055479049683],['title_description']
+hisself,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.5126055479049683, 0.500166118144989, 0.49867337942123413]","['title_description', 'title_description', 'description']"
+hold fast to,['85'],[],merged,1,0,[],,['51388'],[0.5015952587127686],['description']
+hold fast to,['85'],[],merged,3,1,['85'],3.0,"['51388', '23', '85']","[0.5015952587127686, 0.4976431131362915, 0.4970094859600067]","['description', 'title_description', 'title_description']"
+horny,['85'],[],merged,1,0,[],,['23'],[0.4619864225387573],['title_description']
+horny,['85'],[],merged,3,1,['85'],3.0,"['23', '51388', '85']","[0.4619864225387573, 0.4473054111003876, 0.43962767720222473]","['title_description', 'description', 'title_description']"
+humblebrag,['85'],[],merged,1,0,[],,['60977'],[0.47725534439086914],['title_description']
+humblebrag,['85'],[],merged,3,1,['85'],3.0,"['60977', '50143', '85']","[0.47725534439086914, 0.4368865489959717, 0.4326014518737793]","['title_description', 'description', 'description']"
+i'm cross什么意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.4942918121814728],['description']
+i'm cross什么意思,['85'],[],merged,3,1,['85'],1.0,"['85', '51388', '62172']","[0.4942918121814728, 0.4867933988571167, 0.483381450176239]","['description', 'description', 'description']"
+ily什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5951484441757202],['description']
+ily什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '52336']","[0.5951484441757202, 0.566238284111023, 0.5596098899841309]","['description', 'description', 'description']"
+in lieu,['85'],[],merged,1,0,[],,['51388'],[0.5265054702758789],['description']
+in lieu,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '5601']","[0.5265054702758789, 0.522240936756134, 0.5214523673057556]","['description', 'title_description', 'description']"
+just chill,['85'],[],merged,1,0,[],,['5601'],[0.5492463111877441],['description']
+just chill,['85'],[],merged,3,0,[],,"['5601', '51275', '51377']","[0.5492463111877441, 0.5207390785217285, 0.5038279294967651]","['description', 'title_description', 'description']"
+karen正确发音,['85'],[],merged,1,0,[],,['50143'],[0.4899992048740387],['title_description']
+karen正确发音,['85'],[],merged,3,1,['85'],2.0,"['50143', '85', '23']","[0.4899992048740387, 0.4471166133880615, 0.4402238726615906]","['title_description', 'description', 'title_description']"
+ket什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5713169574737549],['title_description']
+ket什么意思,['85'],[],merged,3,0,[],,"['51388', '51386', '52336']","[0.5713169574737549, 0.5351053476333618, 0.5337439775466919]","['title_description', 'title_description', 'description']"
+kill me softly,['85'],[],merged,1,0,[],,['51377'],[0.48787614703178406],['description']
+kill me softly,['85'],[],merged,3,0,[],,"['51377', '23', '62206']","[0.48787614703178406, 0.468656986951828, 0.4683274030685425]","['description', 'title_description', 'description']"
+leftie,['85'],[],merged,1,0,[],,['51388'],[0.4933285713195801],['description']
+leftie,['85'],[],merged,3,0,[],,"['51388', '51377', '60977']","[0.4933285713195801, 0.4844408333301544, 0.47952505946159363]","['description', 'description', 'title_description']"
+less is more,['85'],[],merged,1,0,[],,['60977'],[0.5167326927185059],['title_description']
+less is more,['85'],[],merged,3,0,[],,"['60977', '51388', '23']","[0.5167326927185059, 0.48808959126472473, 0.48797017335891724]","['title_description', 'description', 'title_description']"
+life is a fucking movie翻译,['85'],[],merged,1,0,[],,['23'],[0.4472499191761017],['title_description']
+life is a fucking movie翻译,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '62172']","[0.4472499191761017, 0.4455888569355011, 0.44443660974502563]","['title_description', 'description', 'description']"
+lil,['85'],[],merged,1,0,[],,['23'],[0.5475142002105713],['title_description']
+lil,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51377']","[0.5475142002105713, 0.54576176404953, 0.5374677181243896]","['title_description', 'title_description', 'description']"
+lose yourself,['85'],[],merged,1,0,[],,['23'],[0.4899425208568573],['title_description']
+lose yourself,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.4899425208568573, 0.48352235555648804, 0.4757791757583618]","['title_description', 'title_description', 'description']"
+make it,['85'],[],merged,1,0,[],,['60977'],[0.5333189964294434],['title_description']
+make it,['85'],[],merged,3,0,[],,"['60977', '51044', '23']","[0.5333189964294434, 0.5218266248703003, 0.5047206878662109]","['title_description', 'title_description', 'title_description']"
+make one's day什么意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.4959351718425751],['description']
+make one's day什么意思,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '62172']","[0.4959351718425751, 0.4809151887893677, 0.4698968529701233]","['description', 'title_description', 'description']"
+milf,['85'],[],merged,1,0,[],,['51388'],[0.4726759195327759],['description']
+milf,['85'],[],merged,3,1,['85'],3.0,"['51388', '23', '85']","[0.4726759195327759, 0.46194028854370117, 0.45912307500839233]","['description', 'title_description', 'title_description']"
+mosh pit,['85'],[],merged,1,0,[],,['23'],[0.49081775546073914],['title_description']
+mosh pit,['85'],[],merged,3,0,[],,"['23', '51388', '51377']","[0.49081775546073914, 0.4789542555809021, 0.4655414819717407]","['title_description', 'description', 'description']"
+mua翻译成中文,['85'],[],merged,1,0,[],,['51388'],[0.5809686779975891],['description']
+mua翻译成中文,['85'],[],merged,3,1,['85'],3.0,"['51388', '23', '85']","[0.5809686779975891, 0.5671026706695557, 0.5505896806716919]","['description', 'title_description', 'description']"
+my mum has magic hands,['85'],[],merged,1,0,[],,['23'],[0.5258797407150269],['title_description']
+my mum has magic hands,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.5258797407150269, 0.4769282042980194, 0.46116670966148376]","['title_description', 'title_description', 'description']"
+nob,['85'],[],merged,1,0,[],,['51388'],[0.5223767161369324],['description']
+nob,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '60977']","[0.5223767161369324, 0.5142080187797546, 0.5115545988082886]","['description', 'title_description', 'title_description']"
+on the fly中文翻译,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5606036186218262],['title_description']
+on the fly中文翻译,['85'],[],merged,3,1,['85'],1.0,"['85', '62172', '23']","[0.5606036186218262, 0.5518181324005127, 0.5506706833839417]","['title_description', 'description', 'title_description']"
+on the go,['85'],[],merged,1,0,[],,['47190'],[0.5979841351509094],['title_description']
+on the go,['85'],[],merged,3,0,[],,"['47190', '47266', '60977']","[0.5979841351509094, 0.5474676489830017, 0.5448334217071533]","['title_description', 'title_description', 'title_description']"
+ontherocks怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.4795125722885132],['description']
+ontherocks怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '23', '62172']","[0.4795125722885132, 0.4750593900680542, 0.4685250222682953]","['description', 'title_description', 'description']"
+onwards and upwards什么意思,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5198116302490234],['description']
+onwards and upwards什么意思,['85'],[],merged,3,1,['85'],1.0,"['85', '62172', '50143']","[0.5198116302490234, 0.5176006555557251, 0.5027154684066772]","['description', 'description', 'title_description']"
+oops怎么读英语,['85'],[],merged,1,0,[],,['62172'],[0.47663411498069763],['description']
+oops怎么读英语,['85'],[],merged,3,1,['85'],3.0,"['62172', '50143', '85']","[0.47663411498069763, 0.4749388098716736, 0.4693267345428467]","['description', 'title_description', 'description']"
+out什么意思,['85'],[],merged,1,0,[],,['51388'],[0.6116549968719482],['title_description']
+out什么意思,['85'],[],merged,3,0,[],,"['51388', '52336', '51386']","[0.6116549968719482, 0.5652730464935303, 0.5629189014434814]","['title_description', 'description', 'title_description']"
+paper tiger怎么读,['85'],[],merged,1,0,[],,['51388'],[0.5213103294372559],['description']
+paper tiger怎么读,['85'],[],merged,3,0,[],,"['51388', '23', '51323']","[0.5213103294372559, 0.491871178150177, 0.48810216784477234]","['description', 'title_description', 'description']"
+pay off什么意思,['85'],[],merged,1,0,[],,['51388'],[0.5459499955177307],['description']
+pay off什么意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5459499955177307, 0.5247859954833984, 0.5006042122840881]","['description', 'description', 'title_description']"
+pikoo怎么读,['85'],[],merged,1,0,[],,['51388'],[0.4858067035675049],['description']
+pikoo怎么读,['85'],[],merged,3,0,[],,"['51388', '51377', '51381']","[0.4858067035675049, 0.4666261076927185, 0.4593707323074341]","['description', 'description', 'description']"
+quid,['85'],[],merged,1,0,[],,['51388'],[0.5408076047897339],['description']
+quid,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '51323']","[0.5408076047897339, 0.5308703780174255, 0.5252307653427124]","['description', 'title_description', 'description']"
+rome wasn't built in a day,['85'],[],merged,1,0,[],,['51323'],[0.5048614144325256],['description']
+rome wasn't built in a day,['85'],[],merged,3,0,[],,"['51323', '5601', '47190']","[0.5048614144325256, 0.49305036664009094, 0.47583135962486267]","['description', 'description', 'title_description']"
+rooted to the spot,['85'],[],merged,1,0,[],,['23'],[0.45907706022262573],['title_description']
+rooted to the spot,['85'],[],merged,3,0,[],,"['23', '47242', '51388']","[0.45907706022262573, 0.45723313093185425, 0.45704495906829834]","['title_description', 'title_description', 'description']"
+sell out,['85'],[],merged,1,0,[],,['60977'],[0.5319599509239197],['title_description']
+sell out,['85'],[],merged,3,0,[],,"['60977', '5671', '5271']","[0.5319599509239197, 0.4856283664703369, 0.48312729597091675]","['title_description', 'description', 'description']"
+set eyes on,['85'],[],merged,1,0,[],,['51388'],[0.5311608910560608],['description']
+set eyes on,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '60977']","[0.5311608910560608, 0.5245616436004639, 0.5239711403846741]","['description', 'description', 'title_description']"
+shed a tear,['85'],[],merged,1,0,[],,['23'],[0.4896007478237152],['title_description']
+shed a tear,['85'],[],merged,3,0,[],,"['23', '51377', '51275']","[0.4896007478237152, 0.48956096172332764, 0.48117947578430176]","['title_description', 'description', 'title_description']"
+ship的音标,['85'],[],merged,1,0,[],,['51388'],[0.5132783055305481],['description']
+ship的音标,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '50143']","[0.5132783055305481, 0.5131411552429199, 0.5034881830215454]","['description', 'description', 'title_description']"
+smack怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.43560245633125305],['description']
+smack怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '52523']","[0.43560245633125305, 0.43465015292167664, 0.4343525171279907]","['description', 'title_description', 'description']"
+small world,['85'],[],merged,1,0,[],,['23'],[0.5272564888000488],['title_description']
+small world,['85'],[],merged,3,0,[],,"['23', '47242', '62106']","[0.5272564888000488, 0.5176692605018616, 0.5142619609832764]","['title_description', 'title_description', 'title_description']"
+so what翻译中文,['85'],[],merged,1,0,[],,['62172'],[0.5538091659545898],['description']
+so what翻译中文,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '23']","[0.5538091659545898, 0.5530920028686523, 0.528839111328125]","['description', 'description', 'title_description']"
+softy,['85'],[],merged,1,0,[],,['60977'],[0.5032365322113037],['title_description']
+softy,['85'],[],merged,3,0,[],,"['60977', '51388', '23']","[0.5032365322113037, 0.49426668882369995, 0.48911136388778687]","['title_description', 'description', 'title_description']"
+sooo,['85'],[],merged,1,0,[],,['51377'],[0.5175329446792603],['description']
+sooo,['85'],[],merged,3,0,[],,"['51377', '23', '51388']","[0.5175329446792603, 0.5168943405151367, 0.5026999115943909]","['description', 'title_description', 'description']"
+speaking of which,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5279006958007812],['description']
+speaking of which,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '62172']","[0.5279006958007812, 0.5158555507659912, 0.5114908218383789]","['description', 'description', 'description']"
+squad,['85'],[],merged,1,0,[],,['23'],[0.5006296634674072],['description']
+squad,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '60977']","[0.5006296634674072, 0.4856722950935364, 0.481178343296051]","['description', 'description', 'title_description']"
+stand up翻译成中文,['85'],[],merged,1,0,[],,['62172'],[0.5667258501052856],['description']
+stand up翻译成中文,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '23']","[0.5667258501052856, 0.5655336380004883, 0.5469357371330261]","['description', 'description', 'title_description']"
+strapped翻译,['85'],[],merged,1,0,[],,['62172'],[0.5226778984069824],['description']
+strapped翻译,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '23']","[0.5226778984069824, 0.5180463790893555, 0.49263817071914673]","['description', 'description', 'title_description']"
+stumble upon怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.5100722312927246],['description']
+stumble upon怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '62172', '50143']","[0.5100722312927246, 0.503436267375946, 0.4915071129798889]","['description', 'description', 'description']"
+suckers,['85'],[],merged,1,0,[],,['62206'],[0.4768936336040497],['description']
+suckers,['85'],[],merged,3,0,[],,"['62206', '8470', '60977']","[0.4768936336040497, 0.4768936336040497, 0.47535499930381775]","['description', 'description', 'title_description']"
+suck的意思,['85'],[],merged,1,0,[],,['51388'],[0.5743585824966431],['description']
+suck的意思,['85'],[],merged,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5743585824966431, 0.5574095845222473, 0.5444541573524475]","['description', 'description', 'description']"
+summon up the courage,['85'],[],merged,1,0,[],,['23'],[0.5274033546447754],['title_description']
+summon up the courage,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '50143']","[0.5274033546447754, 0.5049054026603699, 0.4689258933067322]","['title_description', 'title_description', 'description']"
+sup,['85'],[],merged,1,0,[],,['51044'],[0.5464613437652588],['description']
+sup,['85'],[],merged,3,0,[],,"['51044', '60977', '51323']","[0.5464613437652588, 0.5363184213638306, 0.5191655158996582]","['description', 'title_description', 'description']"
+take breath away翻译,['85'],[],merged,1,0,[],,['23'],[0.4801604747772217],['title_description']
+take breath away翻译,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '62172']","[0.4801604747772217, 0.4674479365348816, 0.4618360996246338]","['title_description', 'title_description', 'description']"
+the siver screen,['85'],[],merged,1,0,[],,['51275'],[0.535002589225769],['title_description']
+the siver screen,['85'],[],merged,3,0,[],,"['51275', '23', '51377']","[0.535002589225769, 0.5115149021148682, 0.4819050431251526]","['title_description', 'title_description', 'description']"
+three some,['85'],[],merged,1,0,[],,['60977'],[0.5719740390777588],['title_description']
+three some,['85'],[],merged,3,0,[],,"['60977', '23', '51377']","[0.5719740390777588, 0.5629823803901672, 0.5506808757781982]","['title_description', 'title_description', 'description']"
+to make matters worse,['85'],[],merged,1,0,[],,['60977'],[0.42634761333465576],['title_description']
+to make matters worse,['85'],[],merged,3,1,['85'],3.0,"['60977', '50143', '85']","[0.42634761333465576, 0.4236562252044678, 0.41592836380004883]","['title_description', 'description', 'description']"
+troll,['85'],[],merged,1,0,[],,['23'],[0.4985378384590149],['title_description']
+troll,['85'],[],merged,3,1,['85'],2.0,"['23', '85', '51388']","[0.4985378384590149, 0.4802014231681824, 0.45557451248168945]","['title_description', 'title_description', 'description']"
+wanna怎么读,['85'],[],merged,1,0,[],,['51388'],[0.5025559663772583],['title_description']
+wanna怎么读,['85'],[],merged,3,0,[],,"['51388', '51386', '51381']","[0.5025559663772583, 0.4854525029659271, 0.47976765036582947]","['title_description', 'title_description', 'title_description']"
+wifu,['85'],[],merged,1,0,[],,['51388'],[0.5175629258155823],['description']
+wifu,['85'],[],merged,3,1,['85'],3.0,"['51388', '51377', '85']","[0.5175629258155823, 0.5000059604644775, 0.49666932225227356]","['description', 'description', 'description']"
+woof怎么读的,['85'],[],merged,1,1,['85'],1.0,['85'],[0.4841407537460327],['description']
+woof怎么读的,['85'],[],merged,3,1,['85'],1.0,"['85', '51388', '23']","[0.4841407537460327, 0.4789026379585266, 0.46516871452331543]","['description', 'description', 'description']"
+workaholic怎么读,['85'],[],merged,1,1,['85'],1.0,['85'],[0.4905226230621338],['title_description']
+workaholic怎么读,['85'],[],merged,3,1,['85'],1.0,"['85', '50143', '62172']","[0.4905226230621338, 0.48260027170181274, 0.48067206144332886]","['title_description', 'title_description', 'description']"
+yep,['85'],[],merged,1,0,[],,['51388'],[0.5386990308761597],['description']
+yep,['85'],[],merged,3,0,[],,"['51388', '5601', '23']","[0.5386990308761597, 0.5199967622756958, 0.5150102376937866]","['description', 'description', 'description']"
+yyds是啥意思,['85'],[],merged,1,0,[],,['51388'],[0.5461484789848328],['description']
+yyds是啥意思,['85'],[],merged,3,0,[],,"['51388', '52336', '51386']","[0.5461484789848328, 0.5189366340637207, 0.5177744030952454]","['description', 'description', 'title_description']"
+时尚用英语怎么说fashion,['85'],[],merged,1,0,[],,['62172'],[0.5024755597114563],['description']
+时尚用英语怎么说fashion,['85'],[],merged,3,1,['85'],2.0,"['62172', '85', '50143']","[0.5024755597114563, 0.4941733181476593, 0.49374863505363464]","['description', 'description', 'description']"
+a steal中文翻译,['85'],[],title_description,1,0,[],,['23'],[0.5292724967002869],['title_description']
+a steal中文翻译,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62172']","[0.5292724967002869, 0.5205493569374084, 0.49128592014312744]","['title_description', 'title_description', 'title_description']"
+act out翻译成中文,['85'],[],title_description,1,0,[],,['23'],[0.5724688768386841],['title_description']
+act out翻译成中文,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62172']","[0.5724688768386841, 0.5570569038391113, 0.5243887901306152]","['title_description', 'title_description', 'title_description']"
+after all什么意思,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5332028269767761],['title_description']
+after all什么意思,['85'],[],title_description,3,1,['85'],1.0,"['85', '51388', '50143']","[0.5332028269767761, 0.5134662985801697, 0.5088562965393066]","['title_description', 'title_description', 'title_description']"
+all good things come to an end,['85'],[],title_description,1,0,[],,['23'],[0.4911400079727173],['title_description']
+all good things come to an end,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51275']","[0.4911400079727173, 0.47912418842315674, 0.47545352578163147]","['title_description', 'title_description', 'title_description']"
+all in,['85'],[],title_description,1,0,[],,['23'],[0.5625321269035339],['title_description']
+all in,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51275']","[0.5625321269035339, 0.553045392036438, 0.5411367416381836]","['title_description', 'title_description', 'title_description']"
+all in的意思,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5875849723815918],['title_description']
+all in的意思,['85'],[],title_description,3,1,['85'],1.0,"['85', '51388', '23']","[0.5875849723815918, 0.5702300071716309, 0.5574488043785095]","['title_description', 'title_description', 'title_description']"
+as the saying goes,['85'],[],title_description,1,0,[],,['62172'],[0.5265749096870422],['title_description']
+as the saying goes,['85'],[],title_description,3,1,['85'],2.0,"['62172', '85', '23']","[0.5265749096870422, 0.5067539811134338, 0.4992327094078064]","['title_description', 'title_description', 'title_description']"
+auld lang syne,['85'],[],title_description,1,0,[],,['23'],[0.5435032248497009],['title_description']
+auld lang syne,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51323']","[0.5435032248497009, 0.5245767831802368, 0.4834592640399933]","['title_description', 'title_description', 'title_description']"
+ball buster,['85'],[],title_description,1,0,[],,['23'],[0.5006142854690552],['title_description']
+ball buster,['85'],[],title_description,3,0,[],,"['23', '60977', '51388']","[0.5006142854690552, 0.4891296625137329, 0.4888532757759094]","['title_description', 'title_description', 'title_description']"
+bbw的意思是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5357304811477661],['title_description']
+bbw的意思是什么意思,['85'],[],title_description,3,1,['85'],3.0,"['51388', '51386', '85']","[0.5357304811477661, 0.49992835521698, 0.46361905336380005]","['title_description', 'title_description', 'title_description']"
+be flagged up,['85'],[],title_description,1,0,[],,['60977'],[0.5096196532249451],['title_description']
+be flagged up,['85'],[],title_description,3,0,[],,"['60977', '51388', '61111']","[0.5096196532249451, 0.46960413455963135, 0.46874353289604187]","['title_description', 'title_description', 'title_description']"
+beg off,['85'],[],title_description,1,0,[],,['51388'],[0.5061062574386597],['title_description']
+beg off,['85'],[],title_description,3,0,[],,"['51388', '60977', '23']","[0.5061062574386597, 0.49540045857429504, 0.49403882026672363]","['title_description', 'title_description', 'title_description']"
+big ass,['85'],[],title_description,1,0,[],,['60977'],[0.5000223517417908],['title_description']
+big ass,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.5000223517417908, 0.4814184904098511, 0.46962764859199524]","['title_description', 'title_description', 'title_description']"
+blow out是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5191773176193237],['title_description']
+blow out是什么意思,['85'],[],title_description,3,0,[],,"['51388', '50143', '51386']","[0.5191773176193237, 0.48828452825546265, 0.4871668219566345]","['title_description', 'title_description', 'title_description']"
+bread,['85'],[],title_description,1,0,[],,['60977'],[0.497900128364563],['title_description']
+bread,['85'],[],title_description,3,0,[],,"['60977', '51388', '47272']","[0.497900128364563, 0.4546958804130554, 0.45260876417160034]","['title_description', 'title_description', 'title_description']"
+bread 怎么读,['85'],[],title_description,1,0,[],,['51388'],[0.5010924339294434],['title_description']
+bread 怎么读,['85'],[],title_description,3,0,[],,"['51388', '50143', '51381']","[0.5010924339294434, 0.5010890364646912, 0.45951005816459656]","['title_description', 'title_description', 'title_description']"
+bridge the gap,['85'],[],title_description,1,0,[],,['60977'],[0.5536510944366455],['title_description']
+bridge the gap,['85'],[],title_description,3,1,['85'],2.0,"['60977', '85', '23']","[0.5536510944366455, 0.49288514256477356, 0.48992887139320374]","['title_description', 'title_description', 'title_description']"
+buff是什么意思啊,['85'],[],title_description,1,0,[],,['51388'],[0.5421352386474609],['title_description']
+buff是什么意思啊,['85'],[],title_description,3,0,[],,"['51388', '51386', '51381']","[0.5421352386474609, 0.4867168962955475, 0.48594266176223755]","['title_description', 'title_description', 'title_description']"
+buzz,['85'],[],title_description,1,0,[],,['51388'],[0.5271955728530884],['title_description']
+buzz,['85'],[],title_description,3,0,[],,"['51388', '60977', '23']","[0.5271955728530884, 0.5229600667953491, 0.51930832862854]","['title_description', 'title_description', 'title_description']"
+can't help but,['85'],[],title_description,1,0,[],,['23'],[0.47145530581474304],['title_description']
+can't help but,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.47145530581474304, 0.4702836871147156, 0.4559096693992615]","['title_description', 'title_description', 'title_description']"
+carry翻译成中文,['85'],[],title_description,1,0,[],,['51388'],[0.6324344873428345],['title_description']
+carry翻译成中文,['85'],[],title_description,3,1,['85'],3.0,"['51388', '62172', '85']","[0.6324344873428345, 0.6069259643554688, 0.6058518886566162]","['title_description', 'title_description', 'title_description']"
+chill的意思,['85'],[],title_description,1,0,[],,['51388'],[0.5759907960891724],['title_description']
+chill的意思,['85'],[],title_description,3,0,[],,"['51388', '52336', '51386']","[0.5759907960891724, 0.5519421100616455, 0.5448720455169678]","['title_description', 'title_description', 'title_description']"
+chinglish 翻译,['85'],[],title_description,1,0,[],,['62172'],[0.6283910870552063],['title_description']
+chinglish 翻译,['85'],[],title_description,3,1,['85'],2.0,"['62172', '85', '23']","[0.6283910870552063, 0.6011725664138794, 0.588227391242981]","['title_description', 'title_description', 'title_description']"
+clik clak,['85'],[],title_description,1,0,[],,['23'],[0.5563355088233948],['title_description']
+clik clak,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '60977']","[0.5563355088233948, 0.5232130289077759, 0.5072935223579407]","['title_description', 'title_description', 'title_description']"
+come on,['85'],[],title_description,1,0,[],,['23'],[0.5050008296966553],['title_description']
+come on,['85'],[],title_description,3,0,[],,"['23', '51388', '47190']","[0.5050008296966553, 0.48803290724754333, 0.48617708683013916]","['title_description', 'title_description', 'title_description']"
+come to life怎么读,['85'],[],title_description,1,0,[],,['23'],[0.44955259561538696],['title_description']
+come to life怎么读,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '50143']","[0.44955259561538696, 0.4412134289741516, 0.42434823513031006]","['title_description', 'title_description', 'title_description']"
+come up的意思,['85'],[],title_description,1,0,[],,['51388'],[0.5507177114486694],['title_description']
+come up的意思,['85'],[],title_description,3,0,[],,"['51388', '50143', '51386']","[0.5507177114486694, 0.5332857370376587, 0.5304442644119263]","['title_description', 'title_description', 'title_description']"
+corpus delicti,['85'],[],title_description,1,0,[],,['267'],[0.46898216009140015],['title_description']
+corpus delicti,['85'],[],title_description,3,1,['85'],3.0,"['267', '51388', '85']","[0.46898216009140015, 0.4476762115955353, 0.43560805916786194]","['title_description', 'title_description', 'title_description']"
+crappy怎么读,['85'],[],title_description,1,0,[],,['51388'],[0.4563003182411194],['title_description']
+crappy怎么读,['85'],[],title_description,3,0,[],,"['51388', '23', '50143']","[0.4563003182411194, 0.44952160120010376, 0.4492989480495453]","['title_description', 'title_description', 'title_description']"
+crush是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5085535049438477],['title_description']
+crush是什么意思,['85'],[],title_description,3,1,['85'],3.0,"['51388', '51386', '85']","[0.5085535049438477, 0.48253318667411804, 0.48135533928871155]","['title_description', 'title_description', 'title_description']"
+cuntboy是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.4919171929359436],['title_description']
+cuntboy是什么意思,['85'],[],title_description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.4919171929359436, 0.46193617582321167, 0.44896334409713745]","['title_description', 'title_description', 'title_description']"
+cut about,['85'],[],title_description,1,0,[],,['60977'],[0.5068114399909973],['title_description']
+cut about,['85'],[],title_description,3,0,[],,"['60977', '51044', '23']","[0.5068114399909973, 0.4941083788871765, 0.48498624563217163]","['title_description', 'title_description', 'title_description']"
+dab,['85'],[],title_description,1,0,[],,['60977'],[0.5327098965644836],['title_description']
+dab,['85'],[],title_description,3,0,[],,"['60977', '51044', '47266']","[0.5327098965644836, 0.5222803354263306, 0.5117876529693604]","['title_description', 'title_description', 'title_description']"
+dearjohn怎么读,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.4698795676231384],['title_description']
+dearjohn怎么读,['85'],[],title_description,3,1,['85'],1.0,"['85', '51388', '50143']","[0.4698795676231384, 0.46529489755630493, 0.46338409185409546]","['title_description', 'title_description', 'title_description']"
+desi怎么读,['85'],[],title_description,1,0,[],,['23'],[0.5171970129013062],['title_description']
+desi怎么读,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5171970129013062, 0.5116907954216003, 0.4980708360671997]","['title_description', 'title_description', 'title_description']"
+diamond cuts diamond翻译,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5219215154647827],['title_description']
+diamond cuts diamond翻译,['85'],[],title_description,3,1,['85'],1.0,"['85', '23', '62172']","[0.5219215154647827, 0.5135314464569092, 0.48785096406936646]","['title_description', 'title_description', 'title_description']"
+do justice to,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5002821683883667],['title_description']
+do justice to,['85'],[],title_description,3,1,['85'],1.0,"['85', '51388', '23']","[0.5002821683883667, 0.4974720776081085, 0.4954523742198944]","['title_description', 'title_description', 'title_description']"
+dogg,['85'],[],title_description,1,0,[],,['23'],[0.518578052520752],['title_description']
+dogg,['85'],[],title_description,3,1,['85'],3.0,"['23', '60977', '85']","[0.518578052520752, 0.5129971504211426, 0.5129801630973816]","['title_description', 'title_description', 'title_description']"
+down英语怎么读,['85'],[],title_description,1,0,[],,['50143'],[0.5641438961029053],['title_description']
+down英语怎么读,['85'],[],title_description,3,1,['85'],2.0,"['50143', '85', '51388']","[0.5641438961029053, 0.5334515571594238, 0.5196520686149597]","['title_description', 'title_description', 'title_description']"
+drama怎么读,['85'],[],title_description,1,0,[],,['51275'],[0.4881373643875122],['title_description']
+drama怎么读,['85'],[],title_description,3,1,['85'],3.0,"['51275', '23', '85']","[0.4881373643875122, 0.46411508321762085, 0.4526316225528717]","['title_description', 'title_description', 'title_description']"
+easter egg,['85'],[],title_description,1,0,[],,['23'],[0.514972448348999],['title_description']
+easter egg,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.514972448348999, 0.5038723945617676, 0.49253860116004944]","['title_description', 'title_description', 'title_description']"
+easy going是什么意思,['85'],[],title_description,1,0,[],,['62172'],[0.49879103899002075],['title_description']
+easy going是什么意思,['85'],[],title_description,3,0,[],,"['62172', '50143', '51388']","[0.49879103899002075, 0.4934915602207184, 0.4933820962905884]","['title_description', 'title_description', 'title_description']"
+extreme ironing,['85'],[],title_description,1,0,[],,['23'],[0.4936712682247162],['title_description']
+extreme ironing,['85'],[],title_description,3,1,['85'],3.0,"['23', '60977', '85']","[0.4936712682247162, 0.49190521240234375, 0.47551077604293823]","['title_description', 'title_description', 'title_description']"
+eyeopening什么意思,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5231221914291382],['title_description']
+eyeopening什么意思,['85'],[],title_description,3,1,['85'],1.0,"['85', '51388', '50143']","[0.5231221914291382, 0.5172742605209351, 0.503474771976471]","['title_description', 'title_description', 'title_description']"
+fake是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.525005042552948],['title_description']
+fake是什么意思,['85'],[],title_description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.525005042552948, 0.48547840118408203, 0.4705713391304016]","['title_description', 'title_description', 'title_description']"
+fall in place,['85'],[],title_description,1,0,[],,['23'],[0.4984162449836731],['title_description']
+fall in place,['85'],[],title_description,3,0,[],,"['23', '51275', '51044']","[0.4984162449836731, 0.49442148208618164, 0.4888894557952881]","['title_description', 'title_description', 'title_description']"
+fashion 翻译,['85'],[],title_description,1,0,[],,['23'],[0.5346715450286865],['title_description']
+fashion 翻译,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5346715450286865, 0.5232957601547241, 0.5081720948219299]","['title_description', 'title_description', 'title_description']"
+fire off,['85'],[],title_description,1,0,[],,['23'],[0.48674410581588745],['title_description']
+fire off,['85'],[],title_description,3,1,['85'],3.0,"['23', '51044', '85']","[0.48674410581588745, 0.4703640937805176, 0.4694768488407135]","['title_description', 'title_description', 'title_description']"
+first off,['85'],[],title_description,1,0,[],,['60977'],[0.5193230509757996],['title_description']
+first off,['85'],[],title_description,3,1,['85'],3.0,"['60977', '51388', '85']","[0.5193230509757996, 0.5115904808044434, 0.5101089477539062]","['title_description', 'title_description', 'title_description']"
+five up,['85'],[],title_description,1,0,[],,['51275'],[0.5191541910171509],['title_description']
+five up,['85'],[],title_description,3,0,[],,"['51275', '51388', '60977']","[0.5191541910171509, 0.515281617641449, 0.5074723362922668]","['title_description', 'title_description', 'title_description']"
+flake是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.49273842573165894],['title_description']
+flake是什么意思,['85'],[],title_description,3,1,['85'],2.0,"['51388', '85', '23']","[0.49273842573165894, 0.46801838278770447, 0.45736178755760193]","['title_description', 'title_description', 'title_description']"
+fork发音,['85'],[],title_description,1,0,[],,['51388'],[0.6030577421188354],['title_description']
+fork发音,['85'],[],title_description,3,0,[],,"['51388', '51381', '23']","[0.6030577421188354, 0.5597237348556519, 0.556351363658905]","['title_description', 'title_description', 'title_description']"
+frowned upon. 翻译,['85'],[],title_description,1,0,[],,['62172'],[0.4629894495010376],['title_description']
+frowned upon. 翻译,['85'],[],title_description,3,1,['85'],2.0,"['62172', '85', '50143']","[0.4629894495010376, 0.4445009231567383, 0.4370313882827759]","['title_description', 'title_description', 'title_description']"
+fuck,['85'],[],title_description,1,0,[],,['23'],[0.5047383904457092],['title_description']
+fuck,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5047383904457092, 0.5046353936195374, 0.4918995201587677]","['title_description', 'title_description', 'title_description']"
+fuck you 啥意思,['85'],[],title_description,1,0,[],,['51388'],[0.5062354803085327],['title_description']
+fuck you 啥意思,['85'],[],title_description,3,0,[],,"['51388', '52336', '51386']","[0.5062354803085327, 0.46551042795181274, 0.4606904983520508]","['title_description', 'title_description', 'title_description']"
+funny mud pee翻译成中文,['85'],[],title_description,1,0,[],,['23'],[0.4917633533477783],['title_description']
+funny mud pee翻译成中文,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62172']","[0.4917633533477783, 0.45345407724380493, 0.44270825386047363]","['title_description', 'title_description', 'title_description']"
+gaybear,['85'],[],title_description,1,0,[],,['23'],[0.5029885768890381],['title_description']
+gaybear,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5029885768890381, 0.49570196866989136, 0.479133278131485]","['title_description', 'title_description', 'title_description']"
+get over什么,['85'],[],title_description,1,0,[],,['51388'],[0.520468533039093],['title_description']
+get over什么,['85'],[],title_description,3,0,[],,"['51388', '51386', '50143']","[0.520468533039093, 0.4977306127548218, 0.48745888471603394]","['title_description', 'title_description', 'title_description']"
+getout翻译成中文,['85'],[],title_description,1,0,[],,['23'],[0.5547713041305542],['title_description']
+getout翻译成中文,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62172']","[0.5547713041305542, 0.5427874326705933, 0.5256879329681396]","['title_description', 'title_description', 'title_description']"
+give me five的意思,['85'],[],title_description,1,0,[],,['51388'],[0.6280175447463989],['title_description']
+give me five的意思,['85'],[],title_description,3,0,[],,"['51388', '51386', '51381']","[0.6280175447463989, 0.5682519674301147, 0.5543642044067383]","['title_description', 'title_description', 'title_description']"
+goat怎么读,['85'],[],title_description,1,0,[],,['23'],[0.46275460720062256],['title_description']
+goat怎么读,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '50143']","[0.46275460720062256, 0.4581722617149353, 0.440626323223114]","['title_description', 'title_description', 'title_description']"
+golden goose,['85'],[],title_description,1,0,[],,['60977'],[0.5213733911514282],['title_description']
+golden goose,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.5213733911514282, 0.5189954042434692, 0.5026107430458069]","['title_description', 'title_description', 'title_description']"
+goona怎么读,['85'],[],title_description,1,0,[],,['23'],[0.4658287763595581],['title_description']
+goona怎么读,['85'],[],title_description,3,0,[],,"['23', '51388', '51381']","[0.4658287763595581, 0.46565505862236023, 0.45465755462646484]","['title_description', 'title_description', 'title_description']"
+goon是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5018325448036194],['title_description']
+goon是什么意思,['85'],[],title_description,3,1,['85'],2.0,"['51388', '85', '51386']","[0.5018325448036194, 0.4665839970111847, 0.46603745222091675]","['title_description', 'title_description', 'title_description']"
+green hand是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.48573943972587585],['title_description']
+green hand是什么意思,['85'],[],title_description,3,1,['85'],3.0,"['51388', '52336', '85']","[0.48573943972587585, 0.45651042461395264, 0.4396764934062958]","['title_description', 'title_description', 'title_description']"
+halp怎么读,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5219640731811523],['title_description']
+halp怎么读,['85'],[],title_description,3,1,['85'],1.0,"['85', '23', '51388']","[0.5219640731811523, 0.5079904198646545, 0.49484723806381226]","['title_description', 'title_description', 'title_description']"
+heya是什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5318712592124939],['title_description']
+heya是什么意思,['85'],[],title_description,3,0,[],,"['51388', '52336', '51381']","[0.5318712592124939, 0.5090325474739075, 0.4916020631790161]","['title_description', 'title_description', 'title_description']"
+high的怎么读,['85'],[],title_description,1,0,[],,['51388'],[0.5120599269866943],['title_description']
+high的怎么读,['85'],[],title_description,3,1,['85'],3.0,"['51388', '51381', '85']","[0.5120599269866943, 0.48794326186180115, 0.4865835905075073]","['title_description', 'title_description', 'title_description']"
+hisself,['85'],[],title_description,1,0,[],,['23'],[0.5126055479049683],['title_description']
+hisself,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5126055479049683, 0.500166118144989, 0.4788241684436798]","['title_description', 'title_description', 'title_description']"
+hold fast to,['85'],[],title_description,1,0,[],,['23'],[0.4976431131362915],['title_description']
+hold fast to,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '60977']","[0.4976431131362915, 0.4970094859600067, 0.49625205993652344]","['title_description', 'title_description', 'title_description']"
+horny,['85'],[],title_description,1,0,[],,['23'],[0.4619864225387573],['title_description']
+horny,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.4619864225387573, 0.43962767720222473, 0.4320339262485504]","['title_description', 'title_description', 'title_description']"
+humblebrag,['85'],[],title_description,1,0,[],,['60977'],[0.47725534439086914],['title_description']
+humblebrag,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.47725534439086914, 0.43126243352890015, 0.4208006262779236]","['title_description', 'title_description', 'title_description']"
+i'm cross什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.4858592748641968],['title_description']
+i'm cross什么意思,['85'],[],title_description,3,0,[],,"['51388', '62172', '50143']","[0.4858592748641968, 0.46420279145240784, 0.4613940119743347]","['title_description', 'title_description', 'title_description']"
+ily什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5899094343185425],['title_description']
+ily什么意思,['85'],[],title_description,3,1,['85'],3.0,"['51388', '51386', '85']","[0.5899094343185425, 0.5421517491340637, 0.5360821485519409]","['title_description', 'title_description', 'title_description']"
+in lieu,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.522240936756134],['title_description']
+in lieu,['85'],[],title_description,3,1,['85'],1.0,"['85', '47190', '23']","[0.522240936756134, 0.5169214010238647, 0.514630138874054]","['title_description', 'title_description', 'title_description']"
+just chill,['85'],[],title_description,1,0,[],,['51275'],[0.5207390785217285],['title_description']
+just chill,['85'],[],title_description,3,0,[],,"['51275', '23', '5601']","[0.5207390785217285, 0.5005984902381897, 0.4971919059753418]","['title_description', 'title_description', 'title_description']"
+karen正确发音,['85'],[],title_description,1,0,[],,['50143'],[0.4899992048740387],['title_description']
+karen正确发音,['85'],[],title_description,3,0,[],,"['50143', '23', '51388']","[0.4899992048740387, 0.4402238726615906, 0.43692004680633545]","['title_description', 'title_description', 'title_description']"
+ket什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5713169574737549],['title_description']
+ket什么意思,['85'],[],title_description,3,0,[],,"['51388', '51386', '52336']","[0.5713169574737549, 0.5351053476333618, 0.5305676460266113]","['title_description', 'title_description', 'title_description']"
+kill me softly,['85'],[],title_description,1,0,[],,['23'],[0.468656986951828],['title_description']
+kill me softly,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62206']","[0.468656986951828, 0.4517439305782318, 0.4507589638233185]","['title_description', 'title_description', 'title_description']"
+leftie,['85'],[],title_description,1,0,[],,['60977'],[0.47952505946159363],['title_description']
+leftie,['85'],[],title_description,3,1,['85'],2.0,"['60977', '85', '23']","[0.47952505946159363, 0.47816354036331177, 0.47658592462539673]","['title_description', 'title_description', 'title_description']"
+less is more,['85'],[],title_description,1,0,[],,['60977'],[0.5167326927185059],['title_description']
+less is more,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.5167326927185059, 0.48797017335891724, 0.48304879665374756]","['title_description', 'title_description', 'title_description']"
+life is a fucking movie翻译,['85'],[],title_description,1,0,[],,['23'],[0.4472499191761017],['title_description']
+life is a fucking movie翻译,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62172']","[0.4472499191761017, 0.42826494574546814, 0.414225697517395]","['title_description', 'title_description', 'title_description']"
+lil,['85'],[],title_description,1,0,[],,['23'],[0.5475142002105713],['title_description']
+lil,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5475142002105713, 0.54576176404953, 0.5156756043434143]","['title_description', 'title_description', 'title_description']"
+lose yourself,['85'],[],title_description,1,0,[],,['23'],[0.4899425208568573],['title_description']
+lose yourself,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51275']","[0.4899425208568573, 0.48352235555648804, 0.4674989879131317]","['title_description', 'title_description', 'title_description']"
+make it,['85'],[],title_description,1,0,[],,['60977'],[0.5333189964294434],['title_description']
+make it,['85'],[],title_description,3,0,[],,"['60977', '51044', '23']","[0.5333189964294434, 0.5218266248703003, 0.5047206878662109]","['title_description', 'title_description', 'title_description']"
+make one's day什么意思,['85'],[],title_description,1,0,[],,['50143'],[0.4809151887893677],['title_description']
+make one's day什么意思,['85'],[],title_description,3,1,['85'],2.0,"['50143', '85', '51388']","[0.4809151887893677, 0.46608883142471313, 0.45899879932403564]","['title_description', 'title_description', 'title_description']"
+milf,['85'],[],title_description,1,0,[],,['23'],[0.46194028854370117],['title_description']
+milf,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.46194028854370117, 0.45912307500839233, 0.4542677402496338]","['title_description', 'title_description', 'title_description']"
+mosh pit,['85'],[],title_description,1,0,[],,['23'],[0.49081775546073914],['title_description']
+mosh pit,['85'],[],title_description,3,1,['85'],3.0,"['23', '51388', '85']","[0.49081775546073914, 0.4613194167613983, 0.4549601078033447]","['title_description', 'title_description', 'title_description']"
+mua翻译成中文,['85'],[],title_description,1,0,[],,['51388'],[0.5752805471420288],['title_description']
+mua翻译成中文,['85'],[],title_description,3,1,['85'],3.0,"['51388', '23', '85']","[0.5752805471420288, 0.5671026706695557, 0.5478132963180542]","['title_description', 'title_description', 'title_description']"
+my mum has magic hands,['85'],[],title_description,1,0,[],,['23'],[0.5258797407150269],['title_description']
+my mum has magic hands,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5258797407150269, 0.4769282042980194, 0.4449368119239807]","['title_description', 'title_description', 'title_description']"
+nob,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5142080187797546],['title_description']
+nob,['85'],[],title_description,3,1,['85'],1.0,"['85', '60977', '51388']","[0.5142080187797546, 0.5115545988082886, 0.5089619159698486]","['title_description', 'title_description', 'title_description']"
+on the fly中文翻译,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.5606036186218262],['title_description']
+on the fly中文翻译,['85'],[],title_description,3,1,['85'],1.0,"['85', '23', '62172']","[0.5606036186218262, 0.5506706833839417, 0.5207252502441406]","['title_description', 'title_description', 'title_description']"
+on the go,['85'],[],title_description,1,0,[],,['47190'],[0.5979841351509094],['title_description']
+on the go,['85'],[],title_description,3,0,[],,"['47190', '47266', '60977']","[0.5979841351509094, 0.5474676489830017, 0.5448334217071533]","['title_description', 'title_description', 'title_description']"
+ontherocks怎么读,['85'],[],title_description,1,0,[],,['23'],[0.4750593900680542],['title_description']
+ontherocks怎么读,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '50143']","[0.4750593900680542, 0.4706011116504669, 0.46341466903686523]","['title_description', 'title_description', 'title_description']"
+onwards and upwards什么意思,['85'],[],title_description,1,0,[],,['50143'],[0.5027154684066772],['title_description']
+onwards and upwards什么意思,['85'],[],title_description,3,1,['85'],3.0,"['50143', '51388', '85']","[0.5027154684066772, 0.4965455234050751, 0.48849135637283325]","['title_description', 'title_description', 'title_description']"
+oops怎么读英语,['85'],[],title_description,1,0,[],,['50143'],[0.4749388098716736],['title_description']
+oops怎么读英语,['85'],[],title_description,3,1,['85'],2.0,"['50143', '85', '23']","[0.4749388098716736, 0.44516587257385254, 0.43484896421432495]","['title_description', 'title_description', 'title_description']"
+out什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.6116549968719482],['title_description']
+out什么意思,['85'],[],title_description,3,0,[],,"['51388', '51386', '52336']","[0.6116549968719482, 0.5629189014434814, 0.5506672263145447]","['title_description', 'title_description', 'title_description']"
+paper tiger怎么读,['85'],[],title_description,1,0,[],,['51388'],[0.5127108097076416],['title_description']
+paper tiger怎么读,['85'],[],title_description,3,1,['85'],3.0,"['51388', '23', '85']","[0.5127108097076416, 0.491871178150177, 0.481440007686615]","['title_description', 'title_description', 'title_description']"
+pay off什么意思,['85'],[],title_description,1,0,[],,['51388'],[0.5414947271347046],['title_description']
+pay off什么意思,['85'],[],title_description,3,0,[],,"['51388', '51386', '50143']","[0.5414947271347046, 0.5006042122840881, 0.49247342348098755]","['title_description', 'title_description', 'title_description']"
+pikoo怎么读,['85'],[],title_description,1,0,[],,['51388'],[0.47971290349960327],['title_description']
+pikoo怎么读,['85'],[],title_description,3,0,[],,"['51388', '51381', '51386']","[0.47971290349960327, 0.4556329548358917, 0.44909557700157166]","['title_description', 'title_description', 'title_description']"
+quid,['85'],[],title_description,1,0,[],,['51388'],[0.5313178896903992],['title_description']
+quid,['85'],[],title_description,3,1,['85'],2.0,"['51388', '85', '23']","[0.5313178896903992, 0.5308703780174255, 0.5218173265457153]","['title_description', 'title_description', 'title_description']"
+rome wasn't built in a day,['85'],[],title_description,1,0,[],,['47190'],[0.47583135962486267],['title_description']
+rome wasn't built in a day,['85'],[],title_description,3,0,[],,"['47190', '23', '51044']","[0.47583135962486267, 0.4666447937488556, 0.45966532826423645]","['title_description', 'title_description', 'title_description']"
+rooted to the spot,['85'],[],title_description,1,0,[],,['23'],[0.45907706022262573],['title_description']
+rooted to the spot,['85'],[],title_description,3,0,[],,"['23', '47242', '51275']","[0.45907706022262573, 0.45723313093185425, 0.4559900164604187]","['title_description', 'title_description', 'title_description']"
+sell out,['85'],[],title_description,1,0,[],,['60977'],[0.5319599509239197],['title_description']
+sell out,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.5319599509239197, 0.47288399934768677, 0.47030603885650635]","['title_description', 'title_description', 'title_description']"
+set eyes on,['85'],[],title_description,1,0,[],,['60977'],[0.5239711403846741],['title_description']
+set eyes on,['85'],[],title_description,3,0,[],,"['60977', '51388', '47242']","[0.5239711403846741, 0.5200917720794678, 0.5099334120750427]","['title_description', 'title_description', 'title_description']"
+shed a tear,['85'],[],title_description,1,0,[],,['23'],[0.4896007478237152],['title_description']
+shed a tear,['85'],[],title_description,3,1,['85'],3.0,"['23', '51275', '85']","[0.4896007478237152, 0.48117947578430176, 0.468904972076416]","['title_description', 'title_description', 'title_description']"
+ship的音标,['85'],[],title_description,1,0,[],,['51388'],[0.5068305730819702],['title_description']
+ship的音标,['85'],[],title_description,3,0,[],,"['51388', '50143', '51381']","[0.5068305730819702, 0.5034881830215454, 0.47878092527389526]","['title_description', 'title_description', 'title_description']"
+smack怎么读,['85'],[],title_description,1,0,[],,['50143'],[0.43465015292167664],['title_description']
+smack怎么读,['85'],[],title_description,3,1,['85'],3.0,"['50143', '23', '85']","[0.43465015292167664, 0.42860424518585205, 0.4252817630767822]","['title_description', 'title_description', 'title_description']"
+small world,['85'],[],title_description,1,0,[],,['23'],[0.5272564888000488],['title_description']
+small world,['85'],[],title_description,3,0,[],,"['23', '47242', '62106']","[0.5272564888000488, 0.5176692605018616, 0.5142619609832764]","['title_description', 'title_description', 'title_description']"
+so what翻译中文,['85'],[],title_description,1,0,[],,['23'],[0.528839111328125],['title_description']
+so what翻译中文,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.528839111328125, 0.5229707956314087, 0.5166117548942566]","['title_description', 'title_description', 'title_description']"
+softy,['85'],[],title_description,1,0,[],,['60977'],[0.5032365322113037],['title_description']
+softy,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.5032365322113037, 0.48911136388778687, 0.477200984954834]","['title_description', 'title_description', 'title_description']"
+sooo,['85'],[],title_description,1,0,[],,['23'],[0.5168943405151367],['title_description']
+sooo,['85'],[],title_description,3,1,['85'],3.0,"['23', '60977', '85']","[0.5168943405151367, 0.4980885982513428, 0.4920380711555481]","['title_description', 'title_description', 'title_description']"
+speaking of which,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.499287486076355],['title_description']
+speaking of which,['85'],[],title_description,3,1,['85'],1.0,"['85', '50143', '23']","[0.499287486076355, 0.4961665868759155, 0.4957624673843384]","['title_description', 'title_description', 'title_description']"
+squad,['85'],[],title_description,1,0,[],,['60977'],[0.481178343296051],['title_description']
+squad,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.481178343296051, 0.48031872510910034, 0.4728254973888397]","['title_description', 'title_description', 'title_description']"
+stand up翻译成中文,['85'],[],title_description,1,0,[],,['23'],[0.5469357371330261],['title_description']
+stand up翻译成中文,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.5469357371330261, 0.5434408187866211, 0.5396178364753723]","['title_description', 'title_description', 'title_description']"
+strapped翻译,['85'],[],title_description,1,0,[],,['62172'],[0.5083330869674683],['title_description']
+strapped翻译,['85'],[],title_description,3,1,['85'],2.0,"['62172', '85', '23']","[0.5083330869674683, 0.504867434501648, 0.49263817071914673]","['title_description', 'title_description', 'title_description']"
+stumble upon怎么读,['85'],[],title_description,1,0,[],,['50143'],[0.4784995913505554],['title_description']
+stumble upon怎么读,['85'],[],title_description,3,1,['85'],2.0,"['50143', '85', '23']","[0.4784995913505554, 0.47826236486434937, 0.46403568983078003]","['title_description', 'title_description', 'title_description']"
+suckers,['85'],[],title_description,1,0,[],,['60977'],[0.47535499930381775],['title_description']
+suckers,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.47535499930381775, 0.4676685035228729, 0.4497818946838379]","['title_description', 'title_description', 'title_description']"
+suck的意思,['85'],[],title_description,1,0,[],,['51388'],[0.5698129534721375],['title_description']
+suck的意思,['85'],[],title_description,3,1,['85'],3.0,"['51388', '51386', '85']","[0.5698129534721375, 0.5430253744125366, 0.5224870443344116]","['title_description', 'title_description', 'title_description']"
+summon up the courage,['85'],[],title_description,1,0,[],,['23'],[0.5274033546447754],['title_description']
+summon up the courage,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '50143']","[0.5274033546447754, 0.5049054026603699, 0.45563772320747375]","['title_description', 'title_description', 'title_description']"
+sup,['85'],[],title_description,1,0,[],,['60977'],[0.5363184213638306],['title_description']
+sup,['85'],[],title_description,3,1,['85'],3.0,"['60977', '51044', '85']","[0.5363184213638306, 0.5269802808761597, 0.4981187582015991]","['title_description', 'title_description', 'title_description']"
+take breath away翻译,['85'],[],title_description,1,0,[],,['23'],[0.4801604747772217],['title_description']
+take breath away翻译,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '62172']","[0.4801604747772217, 0.4674479365348816, 0.4260874390602112]","['title_description', 'title_description', 'title_description']"
+the siver screen,['85'],[],title_description,1,0,[],,['51275'],[0.535002589225769],['title_description']
+the siver screen,['85'],[],title_description,3,0,[],,"['51275', '23', '60977']","[0.535002589225769, 0.5115149021148682, 0.475782573223114]","['title_description', 'title_description', 'title_description']"
+three some,['85'],[],title_description,1,0,[],,['60977'],[0.5719740390777588],['title_description']
+three some,['85'],[],title_description,3,1,['85'],3.0,"['60977', '23', '85']","[0.5719740390777588, 0.5629823803901672, 0.5464838147163391]","['title_description', 'title_description', 'title_description']"
+to make matters worse,['85'],[],title_description,1,0,[],,['60977'],[0.42634761333465576],['title_description']
+to make matters worse,['85'],[],title_description,3,0,[],,"['60977', '50143', '51388']","[0.42634761333465576, 0.41451752185821533, 0.4021548926830292]","['title_description', 'title_description', 'title_description']"
+troll,['85'],[],title_description,1,0,[],,['23'],[0.4985378384590149],['title_description']
+troll,['85'],[],title_description,3,1,['85'],2.0,"['23', '85', '51388']","[0.4985378384590149, 0.4802014231681824, 0.4376622438430786]","['title_description', 'title_description', 'title_description']"
+wanna怎么读,['85'],[],title_description,1,0,[],,['51388'],[0.5025559663772583],['title_description']
+wanna怎么读,['85'],[],title_description,3,0,[],,"['51388', '51386', '51381']","[0.5025559663772583, 0.4854525029659271, 0.47976765036582947]","['title_description', 'title_description', 'title_description']"
+wifu,['85'],[],title_description,1,0,[],,['51388'],[0.500703752040863],['title_description']
+wifu,['85'],[],title_description,3,0,[],,"['51388', '60868', '23']","[0.500703752040863, 0.49483269453048706, 0.49381163716316223]","['title_description', 'title_description', 'title_description']"
+woof怎么读的,['85'],[],title_description,1,0,[],,['51388'],[0.4782617688179016],['title_description']
+woof怎么读的,['85'],[],title_description,3,0,[],,"['51388', '51386', '50143']","[0.4782617688179016, 0.464491069316864, 0.4557669460773468]","['title_description', 'title_description', 'title_description']"
+workaholic怎么读,['85'],[],title_description,1,1,['85'],1.0,['85'],[0.4905226230621338],['title_description']
+workaholic怎么读,['85'],[],title_description,3,1,['85'],1.0,"['85', '50143', '23']","[0.4905226230621338, 0.48260027170181274, 0.4711957275867462]","['title_description', 'title_description', 'title_description']"
+yep,['85'],[],title_description,1,0,[],,['51388'],[0.5213267803192139],['title_description']
+yep,['85'],[],title_description,3,1,['85'],3.0,"['51388', '23', '85']","[0.5213267803192139, 0.5058671236038208, 0.5048201680183411]","['title_description', 'title_description', 'title_description']"
+yyds是啥意思,['85'],[],title_description,1,0,[],,['51388'],[0.5454991459846497],['title_description']
+yyds是啥意思,['85'],[],title_description,3,0,[],,"['51388', '51386', '52336']","[0.5454991459846497, 0.5177744030952454, 0.5046480894088745]","['title_description', 'title_description', 'title_description']"
+时尚用英语怎么说fashion,['85'],[],title_description,1,0,[],,['50143'],[0.49099597334861755],['title_description']
+时尚用英语怎么说fashion,['85'],[],title_description,3,0,[],,"['50143', '62172', '51386']","[0.49099597334861755, 0.4661957025527954, 0.4512452483177185]","['title_description', 'title_description', 'title_description']"

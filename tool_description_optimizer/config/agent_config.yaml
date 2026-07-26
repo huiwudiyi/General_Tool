@@ -1,0 +1,45 @@
+# 默认 client，不同节点没有特殊指定时使用它
+default_client:
+  base_url: "http://10.11.175.3/tianchi/chat/completions"
+  api_key: 'Bearer 2cff86c63848008ab7982b5c63c9'
+  timeout: 120
+  max_retry: 3
+
+# 可选：定义多个 endpoint/client
+clients:
+  small:
+      base_url: "http://10.11.175.3/tianchi/chat/completions"
+      api_key: 'Bearer 2cff86c63848008ab7982b5c63c9'
+      timeout: 120
+      max_retry: 3
+
+  strong:
+      base_url: "http://10.11.175.3/tianchi/chat/completions"
+      api_key: 'Bearer 2cff86c63848008ab7982b5c63c9'
+      timeout: 120
+      max_retry: 3
+
+# 每个节点使用哪个模型
+node_model_map:
+  summary: "deepseek-v3.2"
+  judge: "deepseek-v3.2"
+  optimizer: "deepseek-v3.2"
+  criticle: "deepseek-v3.2"
+
+# 每个节点使用哪个 client
+# 如果所有节点都走 default_client，这一段可以不写
+node_llm_client_map:
+  summary: strong
+  judge: strong
+  optimizer: strong
+  criticle: strong
+
+# 每个节点的 temperature
+node_temperature_map:
+  summary: 0.8
+  judge: 0.8
+  optimizer: 0.8
+  criticle: 0.8
+
+
+

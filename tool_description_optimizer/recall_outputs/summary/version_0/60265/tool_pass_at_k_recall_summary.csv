@@ -1,0 +1,7 @@
+﻿view,k,query_count,pass_count,pass_at_k,avg_first_hit_rank,missing_gold_query_count
+description,1,41,0,0.0,,0
+description,3,41,0,0.0,,0
+merged,1,41,0,0.0,,0
+merged,3,41,0,0.0,,0
+title_description,1,41,0,0.0,,0
+title_description,3,41,0,0.0,,0

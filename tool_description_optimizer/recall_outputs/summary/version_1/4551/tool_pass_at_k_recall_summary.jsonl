@@ -1,0 +1,6 @@
+{"view":"description","k":1,"query_count":133,"pass_count":8,"pass_at_k":0.0601503759,"avg_first_hit_rank":1.0,"missing_gold_query_count":0}
+{"view":"description","k":3,"query_count":133,"pass_count":98,"pass_at_k":0.7368421053,"avg_first_hit_rank":2.3673469388,"missing_gold_query_count":0}
+{"view":"merged","k":1,"query_count":133,"pass_count":7,"pass_at_k":0.0526315789,"avg_first_hit_rank":1.0,"missing_gold_query_count":0}
+{"view":"merged","k":3,"query_count":133,"pass_count":91,"pass_at_k":0.6842105263,"avg_first_hit_rank":2.3736263736,"missing_gold_query_count":0}
+{"view":"title_description","k":1,"query_count":133,"pass_count":5,"pass_at_k":0.037593985,"avg_first_hit_rank":1.0,"missing_gold_query_count":0}
+{"view":"title_description","k":3,"query_count":133,"pass_count":47,"pass_at_k":0.3533834586,"avg_first_hit_rank":2.5319148936,"missing_gold_query_count":0}

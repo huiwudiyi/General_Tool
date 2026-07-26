@@ -1,0 +1,7 @@
+﻿query,gold_ids,missing_gold_ids,view,k,pass_at_k,hit_ids,first_hit_rank,recall_ids,recall_scores,recall_views
+绿地中心,['51376'],[],description,1,0,[],,['5012'],[0.5415830612182617],['description']
+绿地中心,['51376'],[],description,3,0,[],,"['5012', '47242', '47198']","[0.5415830612182617, 0.5301704406738281, 0.5187581777572632]","['description', 'description', 'description']"
+绿地中心,['51376'],[],merged,1,0,[],,['47242'],[0.5464715361595154],['title_description']
+绿地中心,['51376'],[],merged,3,0,[],,"['47242', '5012', '47198']","[0.5464715361595154, 0.5415830612182617, 0.5187581777572632]","['title_description', 'description', 'description']"
+绿地中心,['51376'],[],title_description,1,0,[],,['47242'],[0.5464715361595154],['title_description']
+绿地中心,['51376'],[],title_description,3,0,[],,"['47242', '47266', '5671']","[0.5464715361595154, 0.5002825260162354, 0.4946826696395874]","['title_description', 'title_description', 'title_description']"

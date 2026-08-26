@@ -1,7 +1,0 @@
-﻿view,k,query_count,pass_count,pass_at_k,avg_first_hit_rank,missing_gold_query_count
-description,1,7,0,0.0,,0
-description,3,7,1,0.14285714285714285,3.0,0
-merged,1,7,0,0.0,,0
-merged,3,7,1,0.14285714285714285,3.0,0
-title_description,1,7,1,0.14285714285714285,1.0,0
-title_description,3,7,3,0.42857142857142855,2.0,0

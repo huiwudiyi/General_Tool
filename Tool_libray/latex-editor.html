@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaTeX 编辑器</title>
+<!-- MathJax 配置：支持 $...$ 行内公式、$$...$$ 与 \[...\] 块级公式 -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    svg: { fontCache: 'global' },
+    options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea'] }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f5f7fa;
+    --panel: #ffffff;
+    --border: #e2e8f0;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text: #1e293b;
+    --muted: #64748b;
+    --code-bg: #f8fafc;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 24px;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 20px; }
+  header h1 { font-size: 24px; font-weight: 700; }
+  header p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+  .toolbar {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+  }
+  .toolbar-tabs {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px; margin-bottom: 8px;
+  }
+  .tab-btn {
+    border: none; background: transparent; color: var(--muted);
+    padding: 5px 12px; border-radius: 6px; cursor: pointer;
+    font-size: 13px; transition: all .15s;
+  }
+  .tab-btn:hover { background: var(--code-bg); }
+  .tab-btn.active { background: var(--primary); color: #fff; }
+  .symbol-group { display: none; flex-wrap: wrap; gap: 6px; }
+  .symbol-group.active { display: flex; }
+  .sym {
+    min-width: 38px; height: 34px; padding: 0 8px;
+    border: 1px solid var(--border); background: #fff; border-radius: 6px;
+    cursor: pointer; font-size: 16px; color: var(--text);
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: all .12s;
+  }
+  .sym:hover { border-color: var(--primary); background: #eff6ff; }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .panel-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px; border-bottom: 1px solid var(--border);
+    background: var(--code-bg);
+  }
+  .panel-head span { font-weight: 600; font-size: 14px; }
+  textarea {
+    width: 100%; min-height: 220px; border: none; outline: none;
+    padding: 14px; font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+    font-size: 14px; line-height: 1.7; resize: vertical; color: var(--text);
+  }
+  .actions { display: flex; gap: 10px; align-items: center; }
+  button.btn {
+    border: none; border-radius: 8px; padding: 8px 20px;
+    font-size: 14px; font-weight: 600; cursor: pointer; transition: all .15s;
+  }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover { background: var(--primary-hover); }
+  .btn-ghost { background: #fff; color: var(--muted); border: 1px solid var(--border); }
+  .btn-ghost:hover { background: var(--code-bg); }
+
+  .output {
+    padding: 22px 24px; min-height: 120px; font-size: 16px;
+    overflow-x: auto;
+  }
+  .output .placeholder { color: var(--muted); text-align: center; padding: 30px 0; }
+  .output h1, .output h2, .output h3 { margin: 12px 0 8px; }
+  .output p { margin: 8px 0; }
+  .hint { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>LaTeX 公式编辑器</h1>
+    <p>支持数学符号与公式 · 支持中英文混排 · 排版优美</p>
+  </header>
+
+  <!-- 符号工具栏 -->
+  <div class="toolbar">
+    <div class="toolbar-tabs" id="tabs"></div>
+    <div id="symbolPanels"></div>
+  </div>
+
+  <!-- 编辑框 -->
+  <div class="panel">
+    <div class="panel-head">
+      <span>编辑区</span>
+      <span class="hint">行内公式用 $...$，块级公式用 $$...$$，其余为普通文本（支持中英文）</span>
+    </div>
+    <textarea id="editor" spellcheck="false"></textarea>
+  </div>
+
+  <div class="actions" style="margin-bottom:16px;">
+    <button class="btn btn-primary" id="compileBtn">Compile 编译</button>
+    <button class="btn btn-ghost" id="clearBtn">清空</button>
+    <button class="btn btn-ghost" id="sampleBtn">示例</button>
+  </div>
+
+  <!-- 输出区 -->
+  <div class="panel">
+    <div class="panel-head"><span>输出预览</span></div>
+    <div class="output" id="output">
+      <div class="placeholder">点击「Compile 编译」后，这里显示排版结果</div>
+    </div>
+  </div>
+</div>
+<script>
+// 符号库：label 用于按钮显示，insert 为插入的 LaTeX 源码；| 表示光标停留处
+const SYMBOL_SETS = {
+  "希腊字母": [
+    ["α","\\alpha "],["β","\\beta "],["γ","\\gamma "],["δ","\\delta "],
+    ["ε","\\epsilon "],["θ","\\theta "],["λ","\\lambda "],["μ","\\mu "],
+    ["π","\\pi "],["ρ","\\rho "],["σ","\\sigma "],["φ","\\phi "],
+    ["ω","\\omega "],["Γ","\\Gamma "],["Δ","\\Delta "],["Θ","\\Theta "],
+    ["Λ","\\Lambda "],["Σ","\\Sigma "],["Φ","\\Phi "],["Ω","\\Omega "]
+  ],
+  "运算符": [
+    ["±","\\pm "],["∓","\\mp "],["×","\\times "],["÷","\\div "],
+    ["·","\\cdot "],["∗","\\ast "],["⊕","\\oplus "],["⊗","\\otimes "],
+    ["∑","\\sum_{|}^{} "],["∏","\\prod_{|}^{} "],["∫","\\int_{|}^{} "],
+    ["∬","\\iint "],["∮","\\oint "],["√","\\sqrt{|} "],["ⁿ√","\\sqrt[n]{|} "],
+    ["lim","\\lim_{|} "]
+  ],
+  "关系符": [
+    ["≤","\\leq "],["≥","\\geq "],["≠","\\neq "],["≈","\\approx "],
+    ["≡","\\equiv "],["∝","\\propto "],["∼","\\sim "],["≅","\\cong "],
+    ["⊂","\\subset "],["⊃","\\supset "],["⊆","\\subseteq "],["∈","\\in "],
+    ["∉","\\notin "],["∀","\\forall "],["∃","\\exists "],["∅","\\emptyset "]
+  ],
+  "箭头": [
+    ["←","\\leftarrow "],["→","\\rightarrow "],["↔","\\leftrightarrow "],
+    ["⇐","\\Leftarrow "],["⇒","\\Rightarrow "],["⇔","\\Leftrightarrow "],
+    ["↑","\\uparrow "],["↓","\\downarrow "],["↦","\\mapsto "],["⟶","\\longrightarrow "]
+  ],
+  "结构": [
+    ["x/y","\\frac{|}{} "],["xⁿ","x^{|} "],["xₙ","x_{|} "],
+    ["( )","\\left( | \\right) "],["[ ]","\\left[ | \\right] "],
+    ["{ }","\\left\\{ | \\right\\} "],["|·|","\\left| | \\right| "],
+    ["矩阵","\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}"],
+    ["方程组","\\begin{cases} | \\\\  \\end{cases}"],
+    ["x̄","\\bar{|} "],["x⃗","\\vec{|} "],["x̂","\\hat{|} "],["ẋ","\\dot{|} "]
+  ],
+  "函数": [
+    ["sin","\\sin "],["cos","\\cos "],["tan","\\tan "],["log","\\log "],
+    ["ln","\\ln "],["exp","\\exp "],["∞","\\infty "],["∂","\\partial "],
+    ["∇","\\nabla "],["°","^{\\circ} "],["…","\\cdots "],["⋮","\\vdots "]
+  ]
+};
+
+// 构建工具栏
+const tabsEl = document.getElementById('tabs');
+const panelsEl = document.getElementById('symbolPanels');
+Object.keys(SYMBOL_SETS).forEach((name, i) => {
+  const tab = document.createElement('button');
+  tab.className = 'tab-btn' + (i === 0 ? ' active' : '');
+  tab.textContent = name;
+  tab.onclick = () => selectTab(i);
+  tabsEl.appendChild(tab);
+
+  const group = document.createElement('div');
+  group.className = 'symbol-group' + (i === 0 ? ' active' : '');
+  SYMBOL_SETS[name].forEach(([label, code]) => {
+    const b = document.createElement('button');
+    b.className = 'sym';
+    b.textContent = label;
+    b.title = code.trim();
+    b.onclick = () => insertText(code);
+    group.appendChild(b);
+  });
+  panelsEl.appendChild(group);
+});
+
+function selectTab(idx) {
+  document.querySelectorAll('.tab-btn').forEach((t, i) =>
+    t.classList.toggle('active', i === idx));
+  document.querySelectorAll('.symbol-group').forEach((g, i) =>
+    g.classList.toggle('active', i === idx));
+}
+// 编辑器交互
+const editor = document.getElementById('editor');
+const output = document.getElementById('output');
+
+// 在光标处插入代码；code 中的 | 表示插入后光标停留位置
+function insertText(code) {
+  const start = editor.selectionStart;
+  const end = editor.selectionEnd;
+  const val = editor.value;
+  let cursorOffset = code.indexOf('|');
+  const clean = code.replace('|', '');
+  if (cursorOffset < 0) cursorOffset = clean.length;
+  editor.value = val.slice(0, start) + clean + val.slice(end);
+  const pos = start + cursorOffset;
+  editor.focus();
+  editor.setSelectionRange(pos, pos);
+}
+
+// 编译：把编辑内容转成 HTML 并交给 MathJax 渲染
+function compile() {
+  const src = editor.value;
+  if (!src.trim()) {
+    output.innerHTML = '<div class="placeholder">编辑区为空，请输入内容后再编译</div>';
+    return;
+  }
+  // 保护数学公式片段，避免其中的特殊字符被转义或换行处理破坏
+  const math = [];
+  let text = src
+    .replace(/\$\$[\s\S]*?\$\$/g, m => { math.push(m); return `\u0000${math.length - 1}\u0000`; })
+    .replace(/\\\[[\s\S]*?\\\]/g, m => { math.push(m); return `\u0000${math.length - 1}\u0000`; })
+    .replace(/\$[^\$\n]*?\$/g, m => { math.push(m); return `\u0000${math.length - 1}\u0000`; })
+    .replace(/\\\([\s\S]*?\\\)/g, m => { math.push(m); return `\u0000${math.length - 1}\u0000`; });
+
+  // 转义普通文本中的 HTML 特殊字符
+  text = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  // 段落与换行
+  text = text
+    .split(/\n{2,}/)
+    .map(p => '<p>' + p.replace(/\n/g, '<br>') + '</p>')
+    .join('');
+  // 还原数学片段
+  text = text.replace(/\u0000(\d+)\u0000/g, (_, i) => math[+i]);
+
+  output.innerHTML = text;
+  if (window.MathJax && MathJax.typesetPromise) {
+    MathJax.typesetClear && MathJax.typesetClear([output]);
+    MathJax.typesetPromise([output]).catch(err =>
+      output.innerHTML = '<div class="placeholder">渲染出错：' + err.message + '</div>');
+  }
+}
+
+document.getElementById('compileBtn').onclick = compile;
+document.getElementById('clearBtn').onclick = () => {
+  editor.value = '';
+  output.innerHTML = '<div class="placeholder">点击「Compile 编译」后，这里显示排版结果</div>';
+  editor.focus();
+};
+
+const SAMPLE = `\\textbf{二次方程求根公式}
+
+对于一元二次方程 $ax^2 + bx + c = 0$（其中 $a \\neq 0$），其解为：
+
+$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$
+
+\\textbf{欧拉恒等式}被誉为最优美的公式：
+
+$$e^{i\\pi} + 1 = 0$$
+
+常见的积分示例（中英文混排 Chinese \\& English）：
+
+$$\\int_{0}^{\\infty} e^{-x^2}\\, dx = \\frac{\\sqrt{\\pi}}{2}$$
+
+矩阵与方程组：
+
+$$A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}, \\quad
+\\begin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}$$`;
+
+document.getElementById('sampleBtn').onclick = () => { editor.value = SAMPLE; compile(); };
+
+// Ctrl / Cmd + Enter 快捷编译
+editor.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); compile(); }
+});
+
+// 首次加载展示示例
+editor.value = SAMPLE;
+window.addEventListener('load', () => {
+  if (window.MathJax && MathJax.startup) {
+    MathJax.startup.promise.then(compile);
+  } else {
+    setTimeout(compile, 800);
+  }
+});
+</script>
+</body>
+</html>

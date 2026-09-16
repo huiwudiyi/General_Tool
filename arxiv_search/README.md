@@ -19,7 +19,7 @@ ocrmac
 ## 依赖
 
 ```bash
-pip install -r LLM/arxiv_search/requirements.txt
+pip install -r requirements.txt
 ```
 
 依赖包括 `requests`、`beautifulsoup4`、`PyMuPDF` 和 `ocrmac`。`ocrmac` 主要用于 PDF 首页无法直接提取文字时的 OCR 兜底；如果运行环境不支持 OCR，可以使用 `--no-ocr`，如果不需要 PDF 机构识别，可以使用 `--no-pdf`。
@@ -35,7 +35,7 @@ python arxiv_recent_papers.py "Query Rewriting"
 限制最多解析 2 页，并发数设为 8，同时导出 JSON 和 CSV：
 
 ```bash
-python LLM/arxiv_search/arxiv_recent_papers.py "Query Rewriting" \
+python arxiv_recent_papers.py "Query Rewriting" \
   --max-pages 2 \
   --workers 8 \
   --json-output data/papers.json \
@@ -45,7 +45,7 @@ python LLM/arxiv_search/arxiv_recent_papers.py "Query Rewriting" \
 跳过 PDF 下载和 OCR，仅使用 arXiv 详情页识别机构/大厂：
 
 ```bash
-python LLM/arxiv_search/arxiv_recent_papers.py "Query Rewriting" --no-pdf
+python arxiv_recent_papers.py "Query Rewriting" --no-pdf
 ```
 
 ## 输出格式

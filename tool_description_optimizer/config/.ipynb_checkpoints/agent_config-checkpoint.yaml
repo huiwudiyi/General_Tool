@@ -1,21 +1,21 @@
 # 默认 client，不同节点没有特殊指定时使用它
 default_client:
-  base_url: "http://ip/v1/chat/completions"
-  api_key: 'Bearer key'
+  base_url: "http://10.11.175.3/tianchi/chat/completions"
+  api_key: 'Bearer 13af0a5f5048000a72509152a644'
   timeout: 120
   max_retry: 3
 
 # 可选：定义多个 endpoint/client
 clients:
   small:
-      base_url: "http://ip/v1/chat/completions"
-      api_key: 'Bearer key'
+      base_url: "http://10.11.175.3/tianchi/chat/completions"
+      api_key: 'Bearer 13af0a5f5048000a72509152a644'
       timeout: 120
       max_retry: 3
 
   strong:
-      base_url: "http://ip/v1/chat/completions"
-      api_key: 'Bearer key'
+      base_url: "http://10.11.175.3/tianchi/chat/completions"
+      api_key: 'Bearer 13af0a5f5048000a72509152a644'
       timeout: 120
       max_retry: 3
 

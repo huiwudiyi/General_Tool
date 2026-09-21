@@ -1,0 +1,365 @@
+"""
+LangGraph implementation for DeepAgent style Chinese writing agent.
+
+Features:
+1. YAML-driven routing after intent node.
+2. YAML-driven flow edges, so different intents can trigger different execution paths.
+3. LangGraph checkpointer memory with thread_id.
+4. Optimized DeepAgentState: separates persistent memory from intermediate scratch state.
+5. OpenAI-compatible LLM client for vLLM / SGLang / LMDeploy / OpenAI gateways.
+
+Run:
+    pip install openai langgraph langchain-core json-repair pyyaml
+
+    export OPENAI_API_BASE="http://127.0.0.1:8000/v1"
+    export OPENAI_API_KEY="EMPTY"
+    export OPENAI_MODEL="qwen"
+
+    python deepagent_langgraph_yaml_memory.py "帮我写一份项目进展文档" --thread-id user_001
+
+Optional:
+    export DEEPAGENT_NODE_MODELS='{"intent":"qwen3-8b","planner":"qwen3-32b","draft":"qwen3-32b"}'
+    export DEEPAGENT_NODE_TEMPERATURES='{"intent":0.0,"planner":0.2,"draft":0.6}'
+"""
+import yaml
+from json_repair import repair_json
+
+from utils import *
+from state import *
+from openai import OpenAI
+from llm_client import LLMClient, llmclient
+from typing import Any, Callable, Dict, List, Mapping, Optional, Sequence, Literal
+
+# 相关配置
+from flow_config import FlowConfig
+from prompt_registry import PromptRegistry
+
+# 相关执行class
+# from nn_recall_passk import recall_passk_function
+
+try:
+    from langgraph.checkpoint.memory import InMemorySaver
+    from langgraph.graph import END, START, StateGraph
+    from langgraph.graph.message import add_messages
+except ImportError as exc:  # pragma: no cover
+    raise RuntimeError(
+        "Missing langgraph dependencies. Please run: "
+        "pip install langgraph langchain-core"
+    ) from exc
+
+from llm_summary_optimizer import LLMDescriptionSummary
+from llm_description_judge import LLMDescriptionJudge
+from enum import Enum
+
+class Const(Enum):
+    PATH = '../data/data_left/'
+    HOST = "tianchi-proxy.baidu-int.com"
+    APPID = 'app-RNgOjXzL'
+    DEFAULT_MODEL = "deepseek-v4-flash"
+
+class ToolOptimizerGraph:
+    def __init__(
+        self,
+        resource_id: str,
+        llm_client: Optional[LLMClient] = None,
+        prompt_path: str = "../config/prompts.json",
+        flow_config_path: str = "../config/agent_config.yaml",
+        tools_description_path: str = "../data/summary/tool_descriptions.json",
+        test_data_path: str = "../data/summary/query.json",
+        checkpointer: Optional[Any] = None,
+    ) -> None:
+        # 设置通用的 参数
+        self.prompts = PromptRegistry(prompt_path).get_promts()
+        self.flow_config = FlowConfig(flow_config_path)
+        self.checkpointer = checkpointer or InMemorySaver()
+        self.last_tools_description_path = tools_description_path
+        # 设置 tool resource_id
+        self.resource_id = resource_id
+
+        # 加载tools 这个列表
+        self.tools_dict = load_tools_from_json(self.last_tools_description_path)
+
+        # 加载测试集
+        # test_data_path: str = "../data/summary/query.json"
+        # load_tools_from_json(test_data_path)#
+        self.query_good_all_dict = load_tools_from_json(test_data_path)
+        self.query_good_dict = []
+
+        # node -> model
+        self.node_model_map: Dict[str, str] = {} 
+        if self.flow_config.node_model_map:
+            self.node_model_map.update({str(k): str(v) for k, v in self.flow_config.node_model_map.items()})
+
+        # node -> temperature
+        self.node_temperature_map: Dict[str, float] =  {} 
+        if self.flow_config.node_temperature_map:
+            self.node_temperature_map.update({str(k): float(v) for k, v in self.flow_config.node_temperature_map.items()})
+ 
+        llm_dict = {}
+        if len(self.flow_config.clients) != 0:
+            for k, v in self.flow_config.clients.items():
+                if "tianchi" in v["base_url"]:
+                    v['host'] = Const.HOST.value
+                    v['appid'] = Const.APPID.value
+                    llm_dict[k] = LLMClient(**v)
+
+        # llm_client
+        if llm_client:
+            self.llm_client = llm_client
+        else:
+            self.llm_client = LLMClient(**self.flow_config.config["default_client"])
+
+        # node_llm_client_map
+        self.node_llm_clients: Dict[str, LLMClient] = {}
+        if self.flow_config.node_llm_client_map:
+            self.node_llm_clients.update({
+                str(k): llm_dict[v] for k, v in self.flow_config.node_llm_client_map.items()
+            })
+    # --------- 统计和check工具 ----------------------
+    def statistic_check_tool(self, 
+                    state: ToolOptimizerState):
+        """示例主函数：你可以替换为自己的 JSON 文件路径。"""
+        best_record = state.get("best_record", None)
+        if best_record is not None:
+            self.last_tools_description_path = best_record.tool_path
+
+        self.tools_dict = load_tools_from_json(self.last_tools_description_path) 
+        statistic_check_version = "version_" + str(state.get("current_version_id", 0))
+        print("当前执行的版本：", statistic_check_version)
+        statistic_output = Const.PATH.value + "summary/" + statistic_check_version + "/" + self.resource_id
+        os.makedirs(statistic_output, exist_ok=True)
+        version_id, next_version_id = next_version_pair(state)
+
+        versionInfo = VersionRecord(
+            version_id = statistic_check_version, 
+            parent_version_id = version_id,
+            stage = "statistic",
+            description = self.tools_dict[self.resource_id]["description"],
+            case_result = {},
+            top_case = {},
+            tool_path = statistic_output + "/tool_prompt.json",
+            recall1 = 0.0,
+            precision1 = 0.0,
+            recall3 = 0.0,
+            precision3 = 0.0
+        )
+        with open(statistic_output + "/tool_prompt.json","w") as w:
+            json.dump(self.tools_dict, w, ensure_ascii=False, indent=2)
+        # 判断是否需要更新最佳记录
+        return {
+                "current_version_id": version_id,
+                "next_version_id": next_version_id,
+                "version_history": append_version_history(state, versionInfo),
+                "best_description": state.get("current_description", ""),
+                "best_version_id": state.get("current_version_id", 0),
+                "best_record": versionInfo,
+                "inner_loop_cnt":0
+
+            }
+
+    # ---------- generate text ----------
+
+    # node -> client
+    def _client_for(self, node_name: str) -> LLMClient:
+        return self.node_llm_clients.get(node_name, self.llm_client)
+
+    # node -> model name
+    def _model_for(self, node_name: str) -> str:
+        return self.node_model_map.get(node_name, Const.DEFAULT_MODEL.value)
+    # node -> temperature 
+    def _temperature_for(self, node_name: str) -> float:
+        return self.node_temperature_map.get(node_name, 0.8)
+
+    def _generate_text(
+        self,
+        node_name: str,
+        prompt: str,
+        max_tokens: int = 2048,
+        extra_body: Dict[str, Any] = {"top_p": 0.9}
+    ) -> Any:
+        client = self._client_for(node_name)
+        llmclient = LLMClient(
+        base_url="http://10.11.175.3/tianchi/chat/completions",
+        api_key='Bearer 13af0a5f5048000a72509152a644',
+        timeout=60,
+        host="tianchi-proxy.baidu-int.com",
+        max_retry=3,
+        appid='app-RNgOjXzL'
+        )
+        print("llmclient 创建完成")
+        print("prompt", prompt)
+        print("self._model_for(node_name)", self._model_for(node_name))
+        print("self._temperature_for(node_name)", self._temperature_for(node_name))
+        print("extra_body", extra_body)
+        response =  llmclient.generate_text(
+            prompt = prompt,
+            model=self._model_for(node_name),
+            temperature=self._temperature_for(node_name),
+            extra_body = extra_body
+        )
+        return client.parse_chat_content(response)
+    
+    # ---------  LLMNodeCritic node--------------
+    def llm_description_judge(self,  state: ToolOptimizerState):
+        prompt_and_desc = LLMDescriptionJudge._gen_prompt(state, self.prompts['judge'])
+        if not prompt_and_desc:
+            print(f"[judge] optimizer_history 为空，跳过本轮评审")
+            version_id = state.get("next_version_id", 1)
+            return {
+                "current_version_id": version_id,
+                "next_version_id": version_id + 1,
+            }
+        prompt, optimizer_description = prompt_and_desc
+
+        for _ in range(6):
+            response, stype, flag = self._generate_text(node_name = "judge", prompt = prompt)
+            response, flag, error_type = LLMDescriptionJudge._vertify_result(response)
+            if flag:
+                break
+        if flag:
+            relevance_score = response["relevance_score"]
+            if relevance_score == 3 or  relevance_score == 2:
+                self.tools_dict[self.resource_id]['description'] = optimizer_description
+
+            judge_record = InfoRecord(
+                version_id = state.get("current_version_id", "-1"),
+                stage = "judge",
+                info = response
+            )
+            return {
+                "inner_loop_cnt": state.get("inner_loop_cnt", 3) + 1,
+                "judge_history": append_judge_history(state, judge_record)
+            }
+        else:
+            {
+                "inner_loop_cnt": state.get("inner_loop_cnt", 3) + 1
+            }
+    # ---------  LLMNodeSummary node--------------
+    def llm_description_summary(self, 
+                                  state: ToolOptimizerState):
+        prompt = LLMDescriptionSummary._gen_prompt(state, self.prompts['summary'], [])
+        print("summary prompt:", prompt)
+        for _ in range(3):
+            response, stype, flag = self._generate_text(node_name = "summary", prompt = prompt)
+            response, flag, error_type = LLMDescriptionSummary._vertify_result(response)
+            if flag:
+                break
+        if flag:
+            optimizer_description = response["optimizer_description"]
+            
+            print("description: ", state.get("current_version_id", "-1"), self.tools_dict[self.resource_id]['description'])
+            optimizer_record = InfoRecord(
+                version_id = state.get("current_version_id", "-1"),
+                stage = "summary",
+                info = response
+            )
+            return {
+                "optimizer_history": append_optimizer_history(state, optimizer_record)
+            }
+
+    # ---------- graph build ----------
+
+def build_optimizer_graph():
+    """Build and compile the LangGraph optimization workflow."""
+
+    graph = StateGraph(ToolOptimizerState)
+    graph.add_node("optimizer", optimizer)
+    graph.add_node("vertify_after_optimizer", vertify_after_optimizer)
+    graph.add_edge("bump_iteration", "optimizer")
+    return graph.compile()
+
+
+def should_continue(state: ToolOptimizerState) -> Literal["summary_optimizer", END]:
+    # 达到最大轮次
+    max_iteration = state.get("max_iterations", 3)
+    if state.get("current_version_id", 10) > max_iteration:
+        return END
+    return "summary_optimizer"
+
+# 第二层路由：judge节点结束后，控制内层循环3次
+def summary_loop_router(state: ToolOptimizerState):
+    if state["inner_loop_cnt"] < 3:
+        return "summary_optimizer"
+    # 已满3次：内层循环结束，退回统计节点做效果核验
+    return "statistic_check_tool"
+
+#------- init ----
+def list_file(folder_path):
+    all_items = os.listdir(folder_path)
+    # 只列出文件（不包括文件夹）
+    files_only = [os.path.join(folder_path, item) for item in all_items if os.path.isfile(os.path.join(folder_path, item)) and item.endswith(".pkl")]
+    print("\n只列出文件:")
+    return files_only
+
+if __name__ == "__main__":
+    
+    resource_ids_all = []
+
+    for path in list_file(Const.PATH.value + "summary_output"):
+        resource_ids_all.append(path.split("/")[-1].replace(".pkl", ""))
+
+    query_good_all_dict = load_tools_from_json(Const.PATH.value +"summary/tool_descriptions.json")
+    for resource_id, value in query_good_all_dict.items():
+        if resource_id in resource_ids_all:
+            print("skip !!!!", resource_id)
+            continue
+        print("开始执行：", resource_id)
+        try:
+            dag = ToolOptimizerGraph(resource_id = resource_id,
+                prompt_path = "../config/prompts.json",
+                flow_config_path = "../config/agent_config.yaml", # data_not_import/summary/query.json
+                tools_description_path = Const.PATH.value + "summary/tool_descriptions.json",
+                test_data_path  = Const.PATH.value + "summary/tool_descriptions_16.json",
+                checkpointer = None)
+
+            graph = StateGraph(ToolOptimizerState)
+            graph.add_node("statistic_check_tool", dag.statistic_check_tool)
+            graph.add_node("summary_optimizer", dag.llm_description_summary)
+            # graph.add_node("description_judge", dag.llm_description_judge)
+            graph.set_entry_point("statistic_check_tool")
+            graph.add_edge("statistic_check_tool", "summary_optimizer")
+            graph.add_edge("summary_optimizer", END)
+            # graph.add_conditional_edges(
+            #     "statistic_check_tool",
+            #     should_continue,
+            #     {
+            #         "summary_optimizer": "summary_optimizer",
+            #         END: END
+            #     }
+            # )
+            # graph.add_edge("summary_optimizer", "description_judge")
+            # # 3. 评审节点走条件路由：未满3轮继续优化；满3轮回到统计节点
+            # graph.add_conditional_edges(
+            #     source="description_judge",
+            #     path=summary_loop_router,
+            #     path_map={
+            #         "summary_optimizer": "summary_optimizer",
+            #         "statistic_check_tool": "statistic_check_tool"
+            #     }
+            # )
+            compiled_graph = graph.compile()
+
+            initial_state = {
+                    "resource_id": resource_id,
+                    "title": dag.tools_dict[resource_id]["title"],
+                    "original_description": dag.tools_dict[resource_id]["description"],
+                    # 当前工作基线指针（可手动/自动回滚）
+                    "current_version_id": 0,
+                    "current_description": dag.tools_dict[resource_id]["description"],
+                    # 下一个版本的id
+                    "next_version_id": 1,
+                    # 固定参数
+                    "max_iterations": 1,
+                    "iteration": 0,
+                    # 版本历史仓库：全量快照存储
+                    "version_history": [],
+                    "judge_history":[],
+                    #记录历史
+                    "optimizer_history": []
+                }
+            state = compiled_graph.invoke(initial_state)  
+            print("-----------------start save state ... !!!")
+            save_pickle(state, Const.PATH.value + "summary_output/" + resource_id + ".pkl")  
+        except:
+            print("resource_id error:", resource_id)
+            continue

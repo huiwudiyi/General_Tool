@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mermaid 编辑器</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f5f7fa; --panel: #ffffff; --border: #e2e8f0;
+    --primary: #2563eb; --primary-hover: #1d4ed8;
+    --text: #1e293b; --muted: #64748b; --code-bg: #f8fafc;
+    --danger: #dc2626; --danger-bg: #fef2f2;
+    --ok: #16a34a;
+  }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text);
+    display: flex; flex-direction: column; height: 100vh; overflow: hidden;
+  }
+
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 18px; background: var(--panel);
+    border-bottom: 1px solid var(--border); flex-shrink: 0; flex-wrap: wrap;
+  }
+  .title { font-size: 17px; font-weight: 700; white-space: nowrap; }
+  .title small { color: var(--muted); font-weight: 400; font-size: 12px; margin-left: 8px; }
+  .tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .btn {
+    border: 1px solid var(--border); background: #fff; color: var(--text);
+    border-radius: 7px; padding: 6px 12px; font-size: 13px; cursor: pointer;
+    transition: all .15s; white-space: nowrap;
+  }
+  .btn:hover { background: var(--code-bg); border-color: var(--primary); }
+  .btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .btn-primary:hover { background: var(--primary-hover); }
+  select.btn { padding: 6px 8px; }
+  .zoom-label { font-size: 12px; color: var(--muted); min-width: 46px; text-align: center; }
+
+  /* 上：展示区 —— 下：编辑区 */
+  .workspace { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+  .preview-pane { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .pane-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 7px 16px; font-size: 12px; font-weight: 600; color: var(--muted);
+    background: var(--panel); border-bottom: 1px solid var(--border); flex-shrink: 0;
+  }
+  .status { font-weight: 400; display: flex; align-items: center; gap: 6px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); }
+  .dot.err { background: var(--danger); }
+
+  #preview {
+    flex: 1; overflow: auto; background:
+      linear-gradient(90deg, rgba(0,0,0,.035) 1px, transparent 1px) 0 0 / 22px 22px,
+      linear-gradient(rgba(0,0,0,.035) 1px, transparent 1px) 0 0 / 22px 22px,
+      #fff;
+    display: flex; align-items: center; justify-content: center; padding: 24px;
+  }
+  #canvas { transform-origin: center center; transition: transform .12s ease-out; }
+  #canvas svg { max-width: none; height: auto; display: block; }
+  .placeholder { color: var(--muted); font-size: 14px; }
+
+  /* 拖拽分隔条 */
+  .splitter {
+    height: 6px; background: var(--border); cursor: row-resize; flex-shrink: 0;
+    position: relative; transition: background .15s;
+  }
+  .splitter:hover, .splitter.dragging { background: var(--primary); }
+  .splitter::after {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%); width: 40px; height: 2px;
+    background: rgba(255,255,255,.7); border-radius: 2px;
+  }
+
+  .editor-pane { display: flex; flex-direction: column; height: 34%; min-height: 90px; }
+  #editor {
+    flex: 1; width: 100%; border: none; outline: none; resize: none;
+    padding: 14px 18px; font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+    font-size: 13.5px; line-height: 1.75; color: var(--text); background: #fff;
+    tab-size: 2; white-space: pre; overflow-wrap: normal; overflow-x: auto;
+  }
+  .error-bar {
+    display: none; padding: 8px 18px; font-size: 12.5px; line-height: 1.6;
+    color: var(--danger); background: var(--danger-bg);
+    border-top: 1px solid #fecaca; white-space: pre-wrap;
+    max-height: 90px; overflow-y: auto; flex-shrink: 0;
+  }
+  .error-bar.show { display: block; }
+</style>
+</head>
+<body>
+<header>
+  <div class="title">Mermaid 编辑器 <small>上方实时预览 · 下方编写代码</small></div>
+  <div class="tools">
+    <select class="btn" id="sampleSelect" title="载入示例">
+      <option value="">— 载入示例 —</option>
+    </select>
+    <select class="btn" id="themeSelect" title="主题">
+      <option value="default">默认主题</option>
+      <option value="neutral">中性</option>
+      <option value="forest">森林</option>
+      <option value="dark">暗色</option>
+      <option value="base">基础</option>
+    </select>
+    <button class="btn" id="zoomOut" title="缩小">−</button>
+    <span class="zoom-label" id="zoomLabel">100%</span>
+    <button class="btn" id="zoomIn" title="放大">+</button>
+    <button class="btn" id="zoomFit" title="重置缩放">适应</button>
+    <button class="btn" id="copyBtn">复制代码</button>
+    <button class="btn" id="svgBtn">下载 SVG</button>
+    <button class="btn btn-primary" id="pngBtn">下载 PNG</button>
+  </div>
+</header>
+
+<div class="workspace">
+  <!-- 上：展示区 -->
+  <div class="preview-pane">
+    <div class="pane-head">
+      <span>展示区</span>
+      <span class="status" id="status"><i class="dot" id="statusDot"></i><span id="statusText">就绪</span></span>
+    </div>
+    <div id="preview">
+      <div id="canvas"><div class="placeholder">在下方输入 Mermaid 代码，这里实时渲染</div></div>
+    </div>
+  </div>
+
+  <!-- 可拖拽调整上下比例 -->
+  <div class="splitter" id="splitter" title="拖动调整上下高度"></div>
+
+  <!-- 下：编辑区 -->
+  <div class="editor-pane" id="editorPane">
+    <div class="pane-head">
+      <span>编辑区 Mermaid</span>
+      <span id="charCount">0 字符</span>
+    </div>
+    <textarea id="editor" spellcheck="false" placeholder="例如：&#10;graph TD&#10;  A[开始] --> B{判断}&#10;  B -->|是| C[处理]&#10;  B -->|否| D[结束]"></textarea>
+    <div class="error-bar" id="errorBar"></div>
+  </div>
+</div>
+<script>
+// ---------------- 示例库 ----------------
+const SAMPLES = {
+  "流程图 Flowchart": `graph TD
+    A[用户提交订单] --> B{库存充足?}
+    B -->|是| C[锁定库存]
+    B -->|否| D[提示缺货]
+    C --> E[发起支付]
+    E --> F{支付成功?}
+    F -->|是| G[生成发货单]
+    F -->|否| H[释放库存]
+    H --> D
+    G --> I([完成])`,
+
+  "时序图 Sequence": `sequenceDiagram
+    autonumber
+    participant U as 用户
+    participant A as API 网关
+    participant S as 订单服务
+    participant P as 支付服务
+    U->>A: 提交订单
+    A->>S: 创建订单
+    S-->>A: 订单号
+    A->>P: 发起支付
+    P-->>A: 支付链接
+    A-->>U: 返回支付链接
+    Note over U,P: 用户完成支付
+    P->>S: 支付成功回调
+    S-->>P: 确认接收`,
+
+  "类图 Class": `classDiagram
+    class Tool {
+      +String srcid
+      +String title
+      +String description
+      +render()
+    }
+    class MultiModalTool {
+      +List~String~ screenshots
+      +analyzeLayout()
+    }
+    class TextTool {
+      +String labelData
+    }
+    Tool <|-- MultiModalTool
+    Tool <|-- TextTool
+    Tool o-- Renderer
+    class Renderer {
+      +draw(Tool t)
+    }`,
+
+  "状态图 State": `stateDiagram-v2
+    [*] --> 待描述
+    待描述 --> 已生成: describe agent
+    已生成 --> 研判中: judge agent
+    研判中 --> 已通过: 评分 = 3
+    研判中 --> 待优化: 评分 < 3
+    待优化 --> 已生成: generator agent
+    待优化 --> 已定稿: 达到最大轮次
+    已通过 --> 已定稿
+    已定稿 --> [*]`,
+
+  "甘特图 Gantt": `gantt
+    title 多模态描述流水线排期
+    dateFormat YYYY-MM-DD
+    axisFormat %m-%d
+    section 数据准备
+    Excel 输入规整      :done,    d1, 2026-09-01, 3d
+    截图抽取与校验      :done,    d2, after d1, 2d
+    section 模型接入
+    描述 agent          :active,  m1, 2026-09-06, 4d
+    研判 agent          :         m2, after m1, 3d
+    优化 agent          :         m3, after m2, 3d
+    section 验收
+    批量跑测与调优      :         v1, after m3, 5d`,
+
+  "饼图 Pie": `pie showData
+    title 研判评分分布
+    "3 分 直接可用" : 52
+    "2 分 需小幅优化" : 31
+    "1 分 存在臆造" : 17`,
+
+  "Git 图 Gitgraph": `gitGraph
+    commit id: "init"
+    branch feature/multimodal
+    checkout feature/multimodal
+    commit id: "describe agent"
+    commit id: "judge agent"
+    commit id: "generator agent"
+    checkout main
+    merge feature/multimodal
+    commit id: "release"`,
+
+  "实体关系图 ER": `erDiagram
+    TOOL ||--o{ QUERY : "被召回"
+    TOOL {
+      string srcid PK
+      string title
+      string description
+    }
+    QUERY {
+      string text PK
+      string srcid FK
+    }
+    TOOL ||--o{ SCREENSHOT : "包含"
+    SCREENSHOT {
+      string path PK
+      string srcid FK
+    }`,
+
+  "思维导图 Mindmap": `mindmap
+  root((工具描述优化))
+    检索侧
+      向量召回
+      MRR / pass@k
+    裁判侧
+      选择正确率
+      边界判别
+    多模态
+      界面布局
+      功能总结
+    运行保障
+      异常重试
+      中断续跑`
+};
+// ---------------- 元素与状态 ----------------
+const editor = document.getElementById('editor');
+const canvas = document.getElementById('canvas');
+const preview = document.getElementById('preview');
+const errorBar = document.getElementById('errorBar');
+const statusDot = document.getElementById('statusDot');
+const statusText = document.getElementById('statusText');
+const charCount = document.getElementById('charCount');
+const zoomLabel = document.getElementById('zoomLabel');
+
+let zoom = 1;
+let renderSeq = 0;          // 渲染序号，丢弃过期的异步结果
+let lastGoodSvg = '';       // 上一次成功的图，语法错误时继续展示它而不是白屏
+
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'default',
+  securityLevel: 'loose',
+  flowchart: { curve: 'basis', htmlLabels: true },
+  fontFamily: '-apple-system, "PingFang SC", "Microsoft YaHei", sans-serif'
+});
+
+// ---------------- 渲染 ----------------
+function setStatus(ok, text) {
+  statusDot.classList.toggle('err', !ok);
+  statusText.textContent = text;
+}
+
+function showError(message) {
+  errorBar.textContent = message;
+  errorBar.classList.add('show');
+}
+
+function clearError() {
+  errorBar.classList.remove('show');
+  errorBar.textContent = '';
+}
+
+async function render() {
+  const code = editor.value.trim();
+  charCount.textContent = editor.value.length + ' 字符';
+
+  if (!code) {
+    canvas.innerHTML = '<div class="placeholder">在下方输入 Mermaid 代码，这里实时渲染</div>';
+    lastGoodSvg = '';
+    clearError();
+    setStatus(true, '就绪');
+    return;
+  }
+
+  const seq = ++renderSeq;
+  try {
+    // 先 parse 再 render：parse 失败时不会往 DOM 里注入 mermaid 的红色错误块，
+    // 这样可以保留上一张成功的图，编辑过程中不会一直闪白
+    await mermaid.parse(code);
+    const { svg } = await mermaid.render('mermaid-' + seq, code);
+    if (seq !== renderSeq) return;   // 已有更新的渲染在跑，丢弃本次结果
+    canvas.innerHTML = svg;
+    lastGoodSvg = svg;
+    clearError();
+    setStatus(true, '渲染成功');
+  } catch (err) {
+    if (seq !== renderSeq) return;
+    if (lastGoodSvg) canvas.innerHTML = lastGoodSvg;
+    showError(formatError(err));
+    setStatus(false, '语法错误');
+  }
+}
+
+function formatError(err) {
+  const raw = (err && (err.str || err.message)) || String(err);
+  // mermaid 的报错里常带 "Parse error on line N"，把行号提到最前面便于定位
+  const hit = /line (\d+)/i.exec(raw);
+  return (hit ? '第 ' + hit[1] + ' 行附近语法有误\n' : '') + raw.trim();
+}
+
+let timer = null;
+editor.addEventListener('input', () => {
+  clearTimeout(timer);
+  timer = setTimeout(render, 250);   // 防抖：图表渲染比文本贵，间隔放宽一些
+});
+// ---------------- 缩放 ----------------
+function applyZoom() {
+  canvas.style.transform = 'scale(' + zoom + ')';
+  zoomLabel.textContent = Math.round(zoom * 100) + '%';
+}
+document.getElementById('zoomIn').onclick = () => { zoom = Math.min(zoom * 1.2, 5); applyZoom(); };
+document.getElementById('zoomOut').onclick = () => { zoom = Math.max(zoom / 1.2, 0.2); applyZoom(); };
+document.getElementById('zoomFit').onclick = () => { zoom = 1; applyZoom(); };
+// Ctrl/Cmd + 滚轮缩放
+preview.addEventListener('wheel', (e) => {
+  if (!e.ctrlKey && !e.metaKey) return;
+  e.preventDefault();
+  zoom = Math.min(Math.max(zoom * (e.deltaY < 0 ? 1.1 : 1 / 1.1), 0.2), 5);
+  applyZoom();
+}, { passive: false });
+
+// ---------------- 示例与主题 ----------------
+const sampleSelect = document.getElementById('sampleSelect');
+Object.keys(SAMPLES).forEach(name => {
+  const option = document.createElement('option');
+  option.value = name; option.textContent = name;
+  sampleSelect.appendChild(option);
+});
+sampleSelect.onchange = () => {
+  const name = sampleSelect.value;
+  if (!name) return;
+  editor.value = SAMPLES[name];
+  zoom = 1; applyZoom();
+  render();
+};
+
+document.getElementById('themeSelect').onchange = (e) => {
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: e.target.value,
+    securityLevel: 'loose',
+    flowchart: { curve: 'basis', htmlLabels: true },
+    fontFamily: '-apple-system, "PingFang SC", "Microsoft YaHei", sans-serif'
+  });
+  lastGoodSvg = '';   // 主题换了，旧 svg 不能再作为回退
+  render();
+};
+
+// ---------------- 导出 ----------------
+document.getElementById('copyBtn').onclick = async (e) => {
+  try {
+    await navigator.clipboard.writeText(editor.value);
+    flash(e.currentTarget, '已复制');
+  } catch (err) { alert('复制失败，请手动选择代码'); }
+};
+
+function currentSvgElement() {
+  const svg = canvas.querySelector('svg');
+  if (!svg) alert('当前没有可导出的图，请先修正语法');
+  return svg;
+}
+
+function svgToBlobUrl(svg) {
+  const clone = svg.cloneNode(true);
+  clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  const source = '<?xml version="1.0" encoding="UTF-8"?>\n' + clone.outerHTML;
+  return URL.createObjectURL(new Blob([source], { type: 'image/svg+xml;charset=utf-8' }));
+}
+
+function download(url, filename) {
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+document.getElementById('svgBtn').onclick = () => {
+  const svg = currentSvgElement();
+  if (svg) download(svgToBlobUrl(svg), 'mermaid-diagram.svg');
+};
+
+document.getElementById('pngBtn').onclick = () => {
+  const svg = currentSvgElement();
+  if (!svg) return;
+  // 用 viewBox 拿真实尺寸；2 倍图保证导出清晰
+  const box = svg.viewBox && svg.viewBox.baseVal;
+  const width = (box && box.width) || svg.clientWidth || 1200;
+  const height = (box && box.height) || svg.clientHeight || 800;
+  const scale = 2;
+  const url = svgToBlobUrl(svg);
+  const image = new Image();
+  image.onload = () => {
+    const cv = document.createElement('canvas');
+    cv.width = width * scale; cv.height = height * scale;
+    const ctx = cv.getContext('2d');
+    ctx.fillStyle = '#ffffff';                 // 填白底，否则透明 PNG 在深色处看不清
+    ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.drawImage(image, 0, 0, cv.width, cv.height);
+    URL.revokeObjectURL(url);
+    cv.toBlob(blob => download(URL.createObjectURL(blob), 'mermaid-diagram.png'));
+  };
+  image.onerror = () => { URL.revokeObjectURL(url); alert('PNG 导出失败，可改用 SVG'); };
+  image.src = url;
+};
+
+function flash(btn, text) {
+  const old = btn.textContent;
+  btn.textContent = text;
+  setTimeout(() => (btn.textContent = old), 1200);
+}
+// ---------------- 上下比例拖拽 ----------------
+const splitter = document.getElementById('splitter');
+const editorPane = document.getElementById('editorPane');
+let dragging = false;
+
+splitter.addEventListener('mousedown', (e) => {
+  dragging = true;
+  splitter.classList.add('dragging');
+  document.body.style.userSelect = 'none';
+  e.preventDefault();
+});
+window.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  // 编辑区高度 = 窗口底部到鼠标的距离，上下各留出最小空间
+  const height = window.innerHeight - e.clientY;
+  const min = 90;
+  const max = window.innerHeight - 180;
+  editorPane.style.height = Math.min(Math.max(height, min), max) + 'px';
+});
+window.addEventListener('mouseup', () => {
+  if (!dragging) return;
+  dragging = false;
+  splitter.classList.remove('dragging');
+  document.body.style.userSelect = '';
+});
+
+// ---------------- 编辑器增强 ----------------
+editor.addEventListener('keydown', (e) => {
+  // Tab 插入两个空格而不是切走焦点——Mermaid 靠缩进表达层级
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const start = editor.selectionStart, end = editor.selectionEnd;
+    editor.value = editor.value.slice(0, start) + '  ' + editor.value.slice(end);
+    editor.selectionStart = editor.selectionEnd = start + 2;
+    return;
+  }
+  // 回车自动沿用上一行缩进
+  if (e.key === 'Enter') {
+    const start = editor.selectionStart;
+    const lineStart = editor.value.lastIndexOf('\n', start - 1) + 1;
+    const indent = (/^[ \t]*/.exec(editor.value.slice(lineStart, start)) || [''])[0];
+    if (indent) {
+      e.preventDefault();
+      const insert = '\n' + indent;
+      editor.value = editor.value.slice(0, start) + insert + editor.value.slice(editor.selectionEnd);
+      editor.selectionStart = editor.selectionEnd = start + insert.length;
+      clearTimeout(timer);
+      timer = setTimeout(render, 250);
+    }
+  }
+});
+
+// ---------------- 初始化 ----------------
+applyZoom();
+editor.value = SAMPLES['流程图 Flowchart'];
+sampleSelect.value = '流程图 Flowchart';
+if (window.mermaid) {
+  render();
+} else {
+  window.addEventListener('load', render);
+}
+
+</script>
+</body>
+</html>
